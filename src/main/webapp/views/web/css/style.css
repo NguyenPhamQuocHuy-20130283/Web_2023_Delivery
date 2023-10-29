@@ -84,7 +84,7 @@ body {
 
 .mainimg {
   padding-top: 50px;
-  background-image: url("/assets/asset 21.png");
+  background-image: url("../assets/asset21.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
