@@ -5,6 +5,9 @@ body {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+}
 ul,
 li {
   list-style: none;
@@ -119,6 +122,8 @@ a {
 }
 .left {
   float: left;
+  position: sticky;
+  top: 85px;
 }
 .faq {
   display: inline-block;
@@ -152,10 +157,6 @@ a {
     color: #fff;
   }
 }
-.right {
-  margin-left: 20px;
-  float: right;
-}
 .search_bar input[type="search"] {
   padding: 10px 20px;
   border: 1px solid #e3e3e3;
@@ -186,6 +187,7 @@ a {
   float: right;
   max-width: 70%;
 }
+
 .post {
   border-bottom: 1px #efefef dotted;
   padding: 20px 0;
@@ -225,6 +227,18 @@ a {
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+/* faq detail */
+.title-detail-faq {
+  font-size: 40px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+.content-detail-faq {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
 .Footer {
   /* position:sticky; */
   /* bottom: 0px; */
