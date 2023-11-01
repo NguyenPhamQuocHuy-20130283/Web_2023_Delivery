@@ -85,12 +85,14 @@ a {
   padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
+  font-size: larger;
   width: 200px;
 }
 /* end of nav */
 .mini_nav {
   font-size: 9px;
   padding: 10px 40px;
+  background-color: #bebfc1;
   text-transform: capitalize;
 }
 .mini_nav a {
@@ -122,21 +124,33 @@ a {
   display: inline-block;
   margin: 10px 60px;
 }
-.item1 {
-  border: 1px solid #e3e3e3;
-}
+
 .item1 h3 {
   margin-left: 15px;
+  font-size: 30px;
 }
 .item1 ul {
   padding: 0;
 }
 .item1 ul li {
-  padding: 1rem;
+  padding: 3rem;
+  font-size: larger;
+  border-bottom: 1px solid #efefef;
+}
+.item1 ul li i {
+  color: rgba(72, 2, 129);
+  margin-right: 10px;
 }
 .item1 ul li:hover {
-  background-color: #fafafa;
+  background-color: rgba(72, 2, 129);
+  border-radius: 10px;
+  color: #fff;
   cursor: pointer;
+
+  & > i {
+    background-color: rgba(72, 2, 129);
+    color: #fff;
+  }
 }
 .right {
   margin-left: 20px;
@@ -162,6 +176,54 @@ a {
 }
 .search_bar button:hover {
   cursor: pointer;
+}
+
+.listing-article article {
+  margin-bottom: 20px;
+}
+.right {
+  margin-left: 20px;
+  float: right;
+  max-width: 70%;
+}
+.post {
+  border-bottom: 1px #efefef dotted;
+  padding: 20px 0;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+.post-detail {
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  font-size: larger;
+}
+.post-thumb {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.post-thumb a {
+  display: block;
+  position: relative;
+}
+.post-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.3s ease-in-out;
+
+  margin: auto 0;
+}
+.post-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .Footer {
   /* position:sticky; */
