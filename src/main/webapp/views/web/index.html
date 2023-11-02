@@ -52,48 +52,7 @@
                             </a>
                             <div class="dropdown-menu notifications-dropdown-menu">
                                 <ul class="notifications-container">
-                                    <li>
-                                        <a href="" class="notification-item">
-                                            <div class="img-col">
-                                                <div class="img" style="background-image: url('assets/faces/3.jpg')">
-                                                </div>
-                                            </div>
-                                            <div class="body-col">
-                                                <p>
-                                                    <span class="accent">User2</span> Thêm dịch vụ:
-                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="notification-item">
-                                            <div class="img-col">
-                                                <div class="img" style="background-image: url('assets/faces/5.jpg')">
-                                                </div>
-                                            </div>
-                                            <div class="body-col">
-                                                <p>
-                                                    <span class="accent">User1</span> Sửa thông tin dịch vụ:
-                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="notification-item">
-                                            <div class="img-col">
-                                                <div class="img" style="background-image: url('assets/faces/8.jpg')">
-                                                </div>
-                                            </div>
-                                            <div class="body-col">
-                                                <p>
-                                                    <span class="accent">User3</span> Xoá dịch vụ:
-                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
+
                                 </ul>
                                 <footer>
                                     <ul>
@@ -415,16 +374,7 @@
                                             <input class="search-input" placeholder="Tìm...">
                                             <i class="fa fa-search search-icon"></i>
                                         </label>
-                                        <div class="pagination">
-                                            <div class="loadmore" id="loadMore">
-                                                <a style="cursor: pointer;" class="btn btn-primary btn-sm loadmore-btn">
-                                                    <i class="fa fa-angle-down"></i></a>
-                                            </div>
-                                            <div class="loadmore" id="loadLess">
-                                                <a style="cursor: pointer;" class="btn btn-primary btn-sm loadmore-btn">
-                                                    <i class="fa fa-angle-up"></i></a>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                                 <ul class="item-list striped" id="items">
@@ -441,11 +391,7 @@
                                                     <span>Đã bán</span>
                                                 </div>
                                             </div>
-                                            <div class="item-col item-col-header">
-                                                <div>
-                                                    <span>Tồn kho</span>
-                                                </div>
-                                            </div>
+
                                             <div class="item-col item-col-header item-col-date">
                                                 <div>
                                                     <span>Ngày thêm</span>
@@ -535,105 +481,35 @@
         $(document).ready(function() {
             var object = $.parseJSON(`[
             {
-                "id": "1",
-                "name": "Áo len sọc lớn màu",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/1.jpg",
-                "colors": "black, green, orange",
-                "subimglink": "men/1-a.jpg, men/1-b.jpg, men/1-c.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "2",
-                "name": "Áo len sọc phối màu",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/2.jpg",
-                "colors": "brown, orange",
-                "subimglink": "men/2-a.jpg, men/2-b.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "3",
-                "name": "Áo len traffic",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/3.jpg",
-                "colors": "brown, green, brown cream",
-                "subimglink": "men/3-a.jpg, men/3-b.jpg, men/3-c.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "4",
-                "name": "Áo len nhiều màu",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/4.jpg",
-                "colors": "black, grey, blue, brown, white",
-                "subimglink": "men/4-a.jpg, men/4-b.jpg, men/4-c.jpg, men/4-d.jpg, men/4-e.jpg  ",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "5",
-                "name": "Áo len phối màu",
-                "price": "420000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/5.jpg",
-                "colors": "black, brown",
-                "subimglink": "men/5-a.jpg, men/5-b.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "6",
-                "name": "Áo sweate nam",
-                "price": "450000",
-                "categories": "đồ nam, áo thun nam, áo thun tay dài nam",
-                "imglink": "men/6.jpg",
-                "colors": "cream, black ,blue, yellow",
-                "subimglink": "men/6-a.jpg, men/6-b.jpg, men/6-c.jpg, men/6-d.jpg ",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "7",
-                "name": "Áo polo nam - Up to you",
-                "price": "365000",
-                "categories": "đồ nam, áo thun nam, áo thun polo nam",
-                "imglink": "men/7.jpg",
-                "colors": "black, blue, green",
-                "subimglink": "men/7-a.jpg, men/7-b.jpg, men/7-c.jpg",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "8",
-                "name": "Áo polo nam - Simple day",
-                "price": "345000",
-                "categories": "đồ nam, áo thun nam, áo thun polo nam",
-                "imglink": "men/8.jpg",
-                "colors": "black, blue, pink, yellow",
-                "subimglink": "men/8-a.jpg, men/8-b.jpg, men/8-c.jpg, men/8-d.jpg ",
-                "size": "M, L, XL"
-            },
-            {
-                "id": "9",
-                "name": "Áo polo M1ATP01205BSFSO",
-                "price": "295000",
-                "categories": "đồ nam, áo thun nam, áo thun polo nam",
-                "imglink": "men/9.jpg",
-                "colors": "black, blue, yellow, red",
-                "subimglink": "men/9-a.jpg, men/9-b.jpg, men/9-c.jpg, men/9-d.jpg ",
-                "size": "L, XL, 2XL"
-            },
-            {
-                "id": "10",
-                "name": "Áo polo M1ATP01204BSFSO",
-                "price": "295000",
-                "categories": "đồ nam, áo thun nam, áo thun polo nam",
-                "imglink": "men/10.jpg",
-                "colors": "black, grey, green",
-                "subimglink": "men/10-a.jpg, men/10-b.jpg, men/10-c.jpg",
-                "size": "L, XL"
-            }]`);
+            "id": "1",
+            "name": "Giao hàng nhanh",
+            "price": "420000",
+            "categories": "nội địa",
+            "imglink": "",
+            "type": "",
+            "subimglink": "",
+            "time": ""
+        },
+        {
+            "id": "2",
+            "name": "Giao hàng siêu tốc",
+            "price": "420000",
+            "categories": "nội địa",
+            "imglink": "",
+            "type": "",
+            "subimglink": "",
+            "time": ""
+        },
+        {
+            "id": "3",
+            "name": "Giao ngoại địa",
+            "price": "420000",
+            "categories": "Ngoại địa",
+            "imglink": "",
+            "type": "",
+            "subimglink": "",
+            "time": ""
+        }]`);
             function initRender() {
                 var listProducts = object.map(function(element) {
                         return `<li class="item blogBox moreBox" style="display:none">
