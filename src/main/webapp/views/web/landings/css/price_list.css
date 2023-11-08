@@ -85,6 +85,24 @@ body {
 .price_list{
     margin: 0 20px;
 }
+h1{
+    text-align: center;
+}
+.price{
+    width: 100%
+}
+.price_banner{
+    width: 100%;
+}
+.price_test{
+     margin: 0 120px;
+}
+.price_banner2{
+    width: 100%;
+}
+.price_banner3{
+    width: 100%;
+}
 /* end of price_list.css */
 .Footer {
   position: sticky;

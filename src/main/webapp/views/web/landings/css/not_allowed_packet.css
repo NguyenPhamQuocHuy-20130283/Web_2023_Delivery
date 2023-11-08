@@ -82,7 +82,15 @@ body {
   width: 200px;
 }
 /* end of nav bar */
-
+.not_allowed_packet{
+    margin: 0 30px;
+}
+.not_allowed_packet1{
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
 /* end of price_list.css */
 .Footer {
   position: sticky;
