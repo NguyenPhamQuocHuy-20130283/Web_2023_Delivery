@@ -1,40 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Trang Quản Lý</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Trang Quản Lý </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/vendor.css" />
-    <link rel="stylesheet" href="css/orders-list.css" />
-    <style>
-        .input-group-btn {
-            display: flex;
-        }
-    </style>
+    <link rel="stylesheet" href="css/vendor.css">
     <!-- Theme initialization -->
     <script>
-        var themeSettings = localStorage.getItem("themeSettings")
-            ? JSON.parse(localStorage.getItem("themeSettings"))
-            : {};
-        var themeName = themeSettings.themeName || "";
+        var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
+            {};
+        var themeName = themeSettings.themeName || '';
         if (themeName) {
-            document.write(
-                '<link rel="stylesheet" id="theme-style" href="css/app-' +
-                themeName +
-                '.css">'
-            );
-        } else {
-            document.write(
-                '<link rel="stylesheet" id="theme-style" href="css/app.css">'
-            );
+            document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
+        }
+        else {
+            document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
         }
     </script>
 </head>
+
 <body>
 <div class="main-wrapper">
     <div class="app" id="app">
@@ -48,7 +37,7 @@
                 <form role="search">
                     <div class="input-container">
                         <i class="fa fa-search"></i>
-                        <input type="search" placeholder="Tìm..." />
+                        <input type="search" placeholder="Tìm...">
                         <div class="underline"></div>
                     </div>
                 </form>
@@ -76,25 +65,21 @@
                     <li class="profile dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="true" aria-expanded="false">
-                            <div class="img" style="
-                      background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40');
-                    "></div>
+                            <div class="img"
+                                 style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')">
+                            </div>
                             <span class="name"> Admin </span>
                         </a>
                         <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
                             <a class="dropdown-item" href="#">
-                                <i class="fa fa-user icon"></i> Tài khoản
-                            </a>
+                                <i class="fa fa-user icon"></i> Tài khoản </a>
                             <a class="dropdown-item" href="#">
-                                <i class="fa fa-bell icon"></i> Thông báo
-                            </a>
+                                <i class="fa fa-bell icon"></i> Thông báo </a>
                             <a class="dropdown-item" href="#">
-                                <i class="fa fa-gear icon"></i> Cài đặt
-                            </a>
+                                <i class="fa fa-gear icon"></i> Cài đặt </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="login.html">
-                                <i class="fa fa-power-off icon"></i> Đăng xuất
-                            </a>
+                                <i class="fa fa-power-off icon"></i> Đăng xuất </a>
                         </div>
                     </li>
                 </ul>
@@ -269,63 +254,32 @@
                 </ul>
             </footer>
         </aside>
-
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
         <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
         <div class="mobile-menu-handle"></div>
         <article class="content item-editor-page">
             <div class="title-block">
-                <h3 class="title"> Thêm/Sửa thông tin đơn hàng
+                <h3 class="title"> Thêm dịch vụ
                     <span class="sparkline bar" data-type="bar"></span>
                 </h3>
             </div>
             <form name="item">
                 <div class="card card-block">
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Tên khách hàng: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tên dịch vụ: </label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control boxed" placeholder="Nhập tên">
                         </div>
                     </div>
-
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Loại giao hàng: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Giá: </label>
                         <div class="col-sm-10">
-                            <select class="form-control boxed" style="width: 200px">
-                                <option value="option1">Giao hàng nhanh</option>
-                                <option value="option2">Giao hàng siêu tốc</option>
-                                <option value="option3">Giao hàng ngoại địa</option>
-                                <!-- Thêm các tùy chọn khác ở đây -->
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> SĐT: </label>
-                        <div class="col-sm-10">
-                            <input type="number" style="width:200px" class="form-control boxed" placeholder="Nhập sđt">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ nhận hàng: </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control boxed" placeholder="Nhập...">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ giao hàng: </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control boxed" placeholder="Nhập...">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Khoảng cách: </label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control boxed" placeholder="Nhập...">
+                            <input type="text" class="form-control boxed" placeholder="Nhập giá">
                         </div>
                     </div>
 
 
-                    </div>
+
                     <div class="form-group row">
                         <div class="col-sm-10 col-sm-offset-2">
                             <button type="submit" class="btn btn-primary"> Lưu </button>
@@ -338,10 +292,10 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Thư viện ảnh</h4>
+                        <h4 class="modal-title">Media Library</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">Đóng</span>
+                            <span class="sr-only">Close</span>
                         </button>
                     </div>
                     <div class="modal-body modal-tab-container">
@@ -474,18 +428,18 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            <i class="fa fa-warning"></i> Lưu ý
+                            <i class="fa fa-warning"></i> Alert
                         </h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Bạn có muốn thực hiện hành động này?</p>
+                        <p>Are you sure want to do this?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Có</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                     </div>
                 </div>
                 <!-- /.modal-content -->
