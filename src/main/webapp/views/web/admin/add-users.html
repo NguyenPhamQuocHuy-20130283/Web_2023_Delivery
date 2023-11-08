@@ -1,40 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Trang Quản Lý</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Trang Quản Lý </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/vendor.css" />
-    <link rel="stylesheet" href="css/orders-list.css" />
-    <style>
-        .input-group-btn {
-            display: flex;
-        }
-    </style>
+    <link rel="stylesheet" href="css/vendor.css">
     <!-- Theme initialization -->
     <script>
-        var themeSettings = localStorage.getItem("themeSettings")
-            ? JSON.parse(localStorage.getItem("themeSettings"))
-            : {};
-        var themeName = themeSettings.themeName || "";
+        var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
+            {};
+        var themeName = themeSettings.themeName || '';
         if (themeName) {
-            document.write(
-                '<link rel="stylesheet" id="theme-style" href="css/app-' +
-                themeName +
-                '.css">'
-            );
-        } else {
-            document.write(
-                '<link rel="stylesheet" id="theme-style" href="css/app.css">'
-            );
+            document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
+        }
+        else {
+            document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
         }
     </script>
 </head>
+
 <body>
 <div class="main-wrapper">
     <div class="app" id="app">
@@ -48,7 +37,7 @@
                 <form role="search">
                     <div class="input-container">
                         <i class="fa fa-search"></i>
-                        <input type="search" placeholder="Tìm..." />
+                        <input type="search" placeholder="Tìm...">
                         <div class="underline"></div>
                     </div>
                 </form>
@@ -76,25 +65,21 @@
                     <li class="profile dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="true" aria-expanded="false">
-                            <div class="img" style="
-                      background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40');
-                    "></div>
+                            <div class="img"
+                                 style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')">
+                            </div>
                             <span class="name"> Admin </span>
                         </a>
                         <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
                             <a class="dropdown-item" href="#">
-                                <i class="fa fa-user icon"></i> Tài khoản
-                            </a>
+                                <i class="fa fa-user icon"></i> Tài khoản </a>
                             <a class="dropdown-item" href="#">
-                                <i class="fa fa-bell icon"></i> Thông báo
-                            </a>
+                                <i class="fa fa-bell icon"></i> Thông báo </a>
                             <a class="dropdown-item" href="#">
-                                <i class="fa fa-gear icon"></i> Cài đặt
-                            </a>
+                                <i class="fa fa-gear icon"></i> Cài đặt </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="login.html">
-                                <i class="fa fa-power-off icon"></i> Đăng xuất
-                            </a>
+                                <i class="fa fa-power-off icon"></i> Đăng xuất </a>
                         </div>
                     </li>
                 </ul>
@@ -133,6 +118,7 @@
                                         </li>
                                         <li>
                                             <a href="./item-editor.html"> Chỉnh sửa dịch vụ </a>
+
                                         </li>
                                         <li>
                                             <a href="./add-item.html"> Thêm dịch vụ </a>
@@ -272,32 +258,42 @@
                 </ul>
             </footer>
         </aside>
-
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
         <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
         <div class="mobile-menu-handle"></div>
         <article class="content item-editor-page">
             <div class="title-block">
-                <h3 class="title"> Thêm/Sửa thông tin đơn hàng
+                <h3 class="title"> Thêm thông tin người dùng
                     <span class="sparkline bar" data-type="bar"></span>
                 </h3>
             </div>
             <form name="item">
                 <div class="card card-block">
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Tên khách hàng: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tên đăng nhập: </label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control boxed" placeholder="Nhập tên">
                         </div>
                     </div>
-
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Loại giao hàng: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Email: </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control boxed" placeholder="Nhập email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Password: </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control boxed" placeholder="Nhập password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Vai trò: </label>
                         <div class="col-sm-10">
                             <select class="form-control boxed" style="width: 200px">
-                                <option value="option1">Giao hàng nhanh</option>
-                                <option value="option2">Giao hàng siêu tốc</option>
-                                <option value="option3">Giao hàng ngoại địa</option>
+                                <option value="option1">Khách hàng</option>
+                                <option value="option2">Nhân Viên</option>
+                                <option value="option3">Quản lý</option>
                                 <!-- Thêm các tùy chọn khác ở đây -->
                             </select>
                         </div>
@@ -305,29 +301,44 @@
                     <div class="form-group row">
                         <label class="col-sm-2 form-control-label text-xs-right"> SĐT: </label>
                         <div class="col-sm-10">
-                            <input type="number" style="width:200px" class="form-control boxed" placeholder="Nhập sđt">
+                            <input type="text" style="width:200px" class="form-control boxed" placeholder="Nhập sđt">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ nhận hàng: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ: </label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control boxed" placeholder="Nhập...">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ giao hàng: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Ảnh đại diện: </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control boxed" placeholder="Nhập...">
+                            <div class="images-container">
+                                <div class="image-container">
+                                    <div class="controls">
+                                        <a href="" class="control-btn move">
+                                            <i class="fa fa-arrows"></i>
+                                        </a>
+                                        <a href="" class="control-btn star">
+                                            <i class="fa"></i>
+                                        </a>
+                                        <a href="#" class="control-btn remove" data-toggle="modal"
+                                           data-target="#confirm-modal">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                    <div class="image"
+                                         style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')"></div>
+                                </div>
+                                <a href="#" class="add-image" data-toggle="modal" data-target="#modal-media">
+                                    <div class="image-container new">
+                                        <div class="image">
+                                            <i class="fa fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Khoảng cách: </label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control boxed" placeholder="Nhập...">
-                        </div>
-                    </div>
-
-
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10 col-sm-offset-2">
