@@ -182,6 +182,126 @@
                                 </ul>
                             </li>
                         </ul>
+                        <a href="">
+                            <i class="fa fa-cog"></i> Sửa đổi giao diện </a>
+                    </li>
+                </ul>
+            </footer>
+        </aside>
+
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
+        <div class="mobile-menu-handle"></div>
+        <article class="content item-editor-page">
+            <div class="title-block">
+                <h3 class="title"> Sửa thông tin đơn hàng
+                    <span class="sparkline bar" data-type="bar"></span>
+                </h3>
+            </div>
+            <form name="item">
+                <div class="card card-block">
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tên người gửi: </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control boxed" placeholder="Nhập tên">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Loại giao hàng: </label>
+                        <div class="col-sm-10">
+                            <select class="form-control boxed" style="width: 200px">
+                                <option value="option1">Giao hàng nhanh</option>
+                                <option value="option2">Giao hàng siêu tốc</option>
+                                <option value="option3">Giao hàng ngoại địa</option>
+                                <!-- Thêm các tùy chọn khác ở đây -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tên gói hàng: </label>
+                        <div class="col-sm-10">
+                            <input type="text" style="width:200px" class="form-control boxed" placeholder="Nhập tên gói hàng">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> SĐT người gửi: </label>
+                        <div class="col-sm-10">
+                            <input type="number" style="width:200px" class="form-control boxed" placeholder="Nhập sđt">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tên người nhận: </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control boxed" placeholder="Nhập tên">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> SĐT người nhận: </label>
+                        <div class="col-sm-10">
+                            <input type="number" style="width:200px" class="form-control boxed" placeholder="Nhập sđt">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ nhận hàng: </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control boxed" placeholder="Nhập...">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ giao hàng: </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control boxed" placeholder="Nhập...">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Khoảng cách: </label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control boxed" placeholder="Nhập...">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Cân nặng: </label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control boxed" placeholder="Nhập...">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Ảnh gói hàng: </label>
+                        <div class="col-sm-10">
+                            <div class="images-container">
+                                <div class="image-container">
+                                    <div class="controls">
+                                        <a href="" class="control-btn move">
+                                            <i class="fa fa-arrows"></i>
+                                        </a>
+                                        <a href="" class="control-btn star">
+                                            <i class="fa"></i>
+                                        </a>
+                                        <a href="#" class="control-btn remove" data-toggle="modal"
+                                           data-target="#confirm-modal">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </div>
+                                    <div class="image"
+                                         style="background-image:url('../landings/assets/asset 1.jpeg')"></div>
+                                </div>
+                                <a href="#" class="add-image" data-toggle="modal" data-target="#modal-media">
+                                    <div class="image-container new">
+                                        <div class="image">
+                                            <i class="fa fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <button type="submit" class="btn btn-primary"> Lưu </button>
+
                     </nav>
                 </div>
                 <footer class="sidebar-footer">
@@ -297,6 +417,7 @@
                                     </div>
                                 </h3>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -381,13 +502,9 @@
                                                     <th class="table-header--name">
                                                         <span>Khách hàng</span>
                                                     </th>
-                                                    <th class="table-header--name">
-                                                        <span>Tên gói hàng</span>
+                                                    <th class="table-header--status">
+                                                        <span id="cspot-orders-trangthaithanhtoan">Thanh toán</span>
                                                     </th>
-
-<!--                                                    <th class="table-header&#45;&#45;status">-->
-<!--                                                        <span id="cspot-orders-trangthaithanhtoan">Thanh toán</span>-->
-<!--                                                    </th>-->
                                                     <th class="table-header--status">
                                                         <span id="cspot-orders-trangthaigiaohang">Giao hàng</span>
                                                     </th>
@@ -455,15 +572,14 @@
                                                             </span>
                                                         </div>
                                                     </td>
-<!--                                                    <td>-->
-<!--                                                        <div class="status-component">-->
-<!--                                                            <span-->
-<!--                                                                class="circle-status mr-2 circle-status-2"></span><span-->
-<!--                                                                class="badges&#45;&#45;order-payment-status-2">-->
-<!--                                                                Đã thanh toán</span>-->
-<!--                                                        </div>-->
-<!--                                                    </td>-->
-                                                    <td class=" ">Bánh kẹo</td>
+                                                    <td>
+                                                        <div class="status-component">
+                                                            <span
+                                                                class="circle-status mr-2 circle-status-2"></span><span
+                                                                class="badges--order-payment-status-2">
+                                                                Đã thanh toán</span>
+                                                        </div>
+                                                    </td>
                                                     <td>
                                                         <div class="d-flex">
                                                             <div class="status-component">
@@ -527,15 +643,14 @@
                                                             </span>
                                                         </div>
                                                     </td>
-<!--                                                    <td>-->
-<!--                                                        <div class="status-component">-->
-<!--                                                            <span-->
-<!--                                                                class="circle-status mr-2 circle-status-1"></span><span-->
-<!--                                                                class="badges&#45;&#45;order-payment-status-5">-->
-<!--                                                                Chờ xử lý</span>-->
-<!--                                                        </div>-->
-<!--                                                    </td>-->
-                                                    <td class=" ">Bánh kẹo</td>
+                                                    <td>
+                                                        <div class="status-component">
+                                                            <span
+                                                                class="circle-status mr-2 circle-status-1"></span><span
+                                                                class="badges--order-payment-status-5">
+                                                                Chờ xử lý</span>
+                                                        </div>
+                                                    </td>
                                                     <td>
                                                         <div class="d-flex">
                                                             <div class="status-component">
@@ -546,7 +661,7 @@
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td class=" ">BD</td>
+                                                    <td class=" ">TP.HCM</td>
                                                     <td class=" ">HN</td>
                                                     <td class=" ">1000 km</td>
                                                     <td class=" ">5 kg</td>
@@ -599,15 +714,14 @@
                                                             </span>
                                                         </div>
                                                     </td>
-<!--                                                    <td>-->
-<!--                                                        <div class="status-component">-->
-<!--                                                            <span-->
-<!--                                                                class="circle-status mr-2 circle-status-1"></span><span-->
-<!--                                                                class="badges&#45;&#45;order-payment-status-5">-->
-<!--                                                                Chờ xử lý</span>-->
-<!--                                                        </div>-->
-<!--                                                    </td>-->
-                                                    <td class=" ">Bánh kẹo</td>
+                                                    <td>
+                                                        <div class="status-component">
+                                                            <span
+                                                                class="circle-status mr-2 circle-status-1"></span><span
+                                                                class="badges--order-payment-status-5">
+                                                                Chờ xử lý</span>
+                                                        </div>
+                                                    </td>
                                                     <td>
                                                         <div class="d-flex">
                                                             <div class="status-component">
