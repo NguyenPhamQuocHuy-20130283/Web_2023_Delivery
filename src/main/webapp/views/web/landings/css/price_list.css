@@ -84,24 +84,35 @@ body {
 /* end of nav bar */
 .price_list{
     margin: 0 20px;
+    display: flex;
+    flex-direction: column;
 }
 h1{
+    color: #00467f;
     text-align: center;
 }
 .price{
-    width: 100%
+    margin: 0 auto;
 }
 .price_banner{
-    width: 100%;
+    margin: 0 auto;
 }
 .price_test{
-     margin: 0 120px;
+     margin: 0 auto;
 }
 .price_banner2{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
 .price_banner3{
-    width: 100%;
+    margin: 0 auto;
+}
+.price_banner4{
+    width: 50%;
+    margin: 0 auto;
+}
+.price_banner5{
+    margin: 0 auto;
 }
 /* end of price_list.css */
 .Footer {
