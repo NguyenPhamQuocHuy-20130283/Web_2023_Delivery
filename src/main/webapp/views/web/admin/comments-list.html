@@ -10,11 +10,6 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="css/vendor.css">
-    <style>
-        .input-group-btn {
-            display: flex;
-        }
-    </style>
     <!-- Theme initialization -->
     <script>
         var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
@@ -27,6 +22,131 @@
             document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
         }
     </script>
+    <style>
+        .item-col-title {
+            max-width: 220px;
+        }
+
+        .items-list-page .item-list .item-col.item-col-sales {
+            text-align: left;
+            max-width: 120px;
+        }
+
+        .item-col-author {
+            max-width: 100px;
+        }
+
+        .items-list-page .item-list .item-col.item-col-date {
+            text-align: right;
+            max-width: 100px;
+        }
+
+        .item-col-stats {
+            text-align: left !important;
+            font-size: 12px;
+        }
+
+        .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+            opacity: 1;
+            transform: scale(1);
+            z-index: 999;
+        }
+
+        .modal--view {
+            padding: 20px 0 0 0;
+            max-width: 710px;
+        }
+
+        .comments__autor {
+            display: block;
+            position: relative;
+            padding-left: 75px;
+            margin-bottom: 15px;
+        }
+
+        .comments__avatar {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 40px;
+            border-radius: 6px;
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        .comments__name {
+            display: block;
+            font-size: 16px;
+            color: black;
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+        .comments__time {
+            display: block;
+            font-size: 12px;
+            color: black;
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+        .comments__text {
+            display: block;
+            margin: 0 20px;
+            color: black;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            padding: 20px 0;
+            position: relative;
+            border-top: 1px solid #3d3d3d;
+            border-bottom: 1px solid #3d3d3d;
+        }
+
+        .comments__actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 20px;
+            position: relative;
+        }
+
+        .comments__rate {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+        }
+
+        .comments__rate span {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 14px;
+            margin-right: 25px;
+            position: relative;
+            height: 30px;
+        }
+
+        .comments__rate span:first-child i {
+            margin-right: 6px;
+            color: #29b474;
+        }
+
+        .comments__rate span i {
+            font-size: 18px;
+            opacity: 0.6;
+            transition: 0.4s ease;
+            padding-right: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -57,7 +177,50 @@
                                 </sup>
                             </a>
                             <div class="dropdown-menu notifications-dropdown-menu">
-
+                                <ul class="notifications-container">
+                                    <li>
+                                        <a href="" class="notification-item">
+                                            <div class="img-col">
+                                                <div class="img" style="background-image: url('assets/faces/3.jpg')">
+                                                </div>
+                                            </div>
+                                            <div class="body-col">
+                                                <p>
+                                                    <span class="accent">User2</span> Thêm sản phẩm:
+                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="notification-item">
+                                            <div class="img-col">
+                                                <div class="img" style="background-image: url('assets/faces/5.jpg')">
+                                                </div>
+                                            </div>
+                                            <div class="body-col">
+                                                <p>
+                                                    <span class="accent">User1</span> Sửa thông tin sản phẩm:
+                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="notification-item">
+                                            <div class="img-col">
+                                                <div class="img" style="background-image: url('assets/faces/8.jpg')">
+                                                </div>
+                                            </div>
+                                            <div class="body-col">
+                                                <p>
+                                                    <span class="accent">User3</span> Xoá sản phẩm:
+                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
                                 <footer>
                                     <ul>
                                         <li>
@@ -83,7 +246,7 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="fa fa-gear icon"></i> Cài đặt </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../landings/landing/login.html">
+                                <a class="dropdown-item" href="login.html">
                                     <i class="fa fa-power-off icon"></i> Đăng xuất </a>
                             </div>
                         </li>
@@ -154,6 +317,25 @@
                                     </li>
 
                                 </ul>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-area-chart"></i> Báo cáo
+                                    <i class="fa arrow"></i>
+                                </a>
+                                <ul class="sidebar-nav">
+
+                                    <li>
+                                        <a href="comments-list.html"> Danh sách báo cáo </a>
+                                    </li>
+                                </ul>
+                                <ul class="sidebar-nav">
+
+                                    <li>
+                                        <a href="add-comments.html"> Thêm báo cáo </a>
+                                    </li>
+                                </ul>
+
                             </li>
                             <li>
                                 <a href="">
@@ -260,29 +442,19 @@
                     <div class="title-block">
                         <div class="row">
                             <div class="col-md-6">
-                                <h3 class="title"> Danh sách dịch vụ
-                                    <a href="add-item.html" class="btn btn-primary btn-sm rounded-s"> Thêm dịch vụ
+                                <h3 class="title"> Danh sách bản ghi
+                                    <a href="add-comments.html" class="btn btn-primary btn-sm rounded-s"> Thêm bản ghi
                                     </a>
-
                                     <div class="action dropdown">
                                         <button class="btn  btn-sm rounded-s btn-secondary dropdown-toggle"
                                             type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false"> Hành động </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                             <a class="dropdown-item hidden-item" href="#">
-                                                <i class="fa fa-pencil-square-o icon"></i>Ẩn dịch vụ</a>
+                                                <i class="fa fa-pencil-square-o icon"></i>Ẩn bình luận</a>
                                             <a class="dropdown-item delete-item" href="#" data-toggle="modal"
                                                 data-target="#confirm-modal">
-                                                <i class="fa fa-close icon"></i>Xoá dịch vụ</a>
-                                        </div>
-                                    </div>
-                                    <div class="action dropdown">
-
-                                        <div class="p-4 dropdown-menu" aria-labelledby="dropdownMenu1">
-
-
-
-
+                                                <i class="fa fa-close icon"></i>Xoá bình luận</a>
                                         </div>
                                     </div>
                                 </h3>
@@ -302,9 +474,9 @@
                         </form>
                     </div>
                 </div>
-                <div class="card item">
-                    <ul class="item-list striped" id="items">
-                        <li class="item item-list-header" id="first-child">
+                <div class="card items">
+                    <ul class="item-list striped">
+                        <li class="item item-list-header">
                             <div class="item-row">
                                 <div class="item-col fixed item-col-check">
                                     <label class="item-check" id="select-all-items">
@@ -312,34 +484,34 @@
                                         <span></span>
                                     </label>
                                 </div>
-
+                                <div class="item-col item-col-header fixed item-col-img md">
+                                    <div>
+                                        <span>ID</span>
+                                    </div>
+                                </div>
                                 <div class="item-col item-col-header item-col-title">
                                     <div>
-                                        <span>Tên dịch vụ</span>
-                                    </div>
-                                </div>
-                                <div class="item-col item-col-header item-col-sales">
-                                    <div>
-                                        <span>Mã dịch vụ</span>
-                                    </div>
-                                </div>
-                                <div class="item-col item-col-header item-col-stats">
-                                    <div class="no-overflow">
-                                        <span>Đã bán</span>
+                                        <span>Người dùng</span>
                                     </div>
                                 </div>
 
-                                <div class="item-col item-col-header item-col-author">
-                                    <div class="no-overflow" style="text-align: center">
-                                        <span>Trạng thái</span>
+                                <div class="item-col item-col-header item-col-stats">
+                                    <div class="no-overflow">
+                                        <span>Tên sự kiện</span>
                                     </div>
                                 </div>
+                                <div class="item-col item-col-header item-col-category">
+                                    <div class="no-overflow">
+                                        <span>Phương thức HTTP</span>
+                                    </div>
+                                </div>
+
                                 <div class="item-col item-col-header item-col-date">
                                     <div>
                                         <span>Ngày thêm</span>
                                     </div>
                                 </div>
-                                <div class="item-col item-col-header fixed item-col-actions-dropdown"></div>
+                                <div class="item-col item-col-header fixed item-col-actions-dropdown"> </div>
                             </div>
                         </li>
                         <div id="appendItem">
@@ -371,123 +543,157 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Bạn có chắc muốn xoá dịch vụ này ?</p>
+                            <p>Bạn có chắc muốn thực hiện hành động này ?</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary yes" data-dismiss="modal">Có</button>
-                            <button type="button" class="btn btn-secondary no" data-dismiss="modal">Không</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Có</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->
                 </div>
                 <!-- /.modal-dialog -->
             </div>
-            <!-- /.modal -->
+            <div class="modal fade" id="confirm-detailsModal">
+                <div class="modal-dialog" role="document" style="max-width: 760px;">
+                    <div class="modal-content" style="width: 760px;">
+                        <div class="modal-header">
+                            <h4 class="modal-title">
+                                <i class="fa fa-info-circle"></i> Thông tin chi tiết
+                            </h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="zoom-anim-dialog modal--view" id="modal-view">
+                                <div class="comments__autor">
+                                    <img class="comments__avatar" src="./assets/faces/3.jpg" alt="">
+                                    <span class="comments__name">User3</span>
+                                    <span class="comments__time">30.08.2018, 17:53</span>
+                                </div>
+                                <p class="comments__text">There are many variations of passages of Lorem Ipsum
+                                    available,
+                                    but the majority have suffered alteration in some form, by injected humour, or
+                                    randomised words which don't look even slightly believable. If you are going to use
+                                    a
+                                    passage of Lorem
+                                    Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+                                    text.</p>
+                                <div class="comments__actions">
+                                    <div class="comments__rate" style="text-align: center">
+                                        <span style="font-size: 18px"><i class="fa fa-thumbs-up" aria-hidden="true"></i>12</span>
+                                        <span style="font-size: 18px"><i class="fa fa-reply" aria-hidden="true"></i>2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+            </div>
         </div>
-    </div>
-    <!-- Reference block for JS -->
-    <div class="ref" id="ref">
-        <div class="color-primary"></div>
-        <div class="chart">
+        <!-- Reference block for JS -->
+        <div class="ref" id="ref">
             <div class="color-primary"></div>
-            <div class="color-secondary"></div>
+            <div class="chart">
+                <div class="color-primary"></div>
+                <div class="color-secondary"></div>
+            </div>
         </div>
-    </div>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-80463319-4', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script src="./js/jquery-3.6.1.min.js"></script>
-    <script src="./js/vendor.js"></script>
-    <script src="./js/app.js"></script>
-    <script>
-        var current_page = 1;
-        var records_per_page = 2;
-
-        var objJson = $.parseJSON(`[
-        {
-            "id": "1",
-            "name": "Giao hàng nhanh",
-            "price": "420000",
-            "categories": "nội địa",
-            "imglink": "",
-            "type": "",
-            "subimglink": "",
-            "time": ""
-        },
-        {
-            "id": "2",
-            "name": "Giao hàng siêu tốc",
-            "price": "420000",
-            "categories": "nội địa",
-            "imglink": "",
-            "type": "",
-            "subimglink": "",
-            "time": ""
-        },
-        {
-            "id": "3",
-            "name": "Giao ngoại địa",
-            "price": "420000",
-            "categories": "Ngoại địa",
-            "imglink": "",
-            "type": "",
-            "subimglink": "",
-            "time": ""
-        }]`);
-
-        function prevPage() {
-            if (current_page > 1) {
-                current_page--;
-                changePage(current_page);
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-80463319-4', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/vendor.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+            var current_page = 1;
+            var records_per_page = 6;
+            function getRandomDate() {
+                const maxDate = Date.now();
+                const timestamp = Math.floor(Math.random() * maxDate);
+                var d = new Date(timestamp);
+                return d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
             }
-        }
-
-        function nextPage() {
-            if (current_page < numPages()) {
-                current_page++;
-                changePage(current_page);
+            var object = $.parseJSON(`[
+            {
+                "id": "T1",
+                "name": "abc",
+                "idBL": "BL2",
+                "reply": "Đăng nhập",
+                "countLike": "Post"
+            },
+            {
+                "id": "T2",
+                "name": "abc22",
+                "idBL": "BL1",
+                "reply": "Đăng ký",
+                "countLike": "Post"
+            },
+            {
+                "id": "T3",
+                "name": "test",
+                "idBL": "BL7",
+                "reply": "Sửa thông tin người dùng",
+                "countLike": "Get"
             }
-        }
-        function init() {
-            var $itemActions = $(".item-actions-dropdown");
-
-            $(document).on('click', function (e) {
-                if (!$(e.target).closest('.item-actions-dropdown').length) {
-                    $itemActions.removeClass('active');
+           ]`);
+            function prevPage() {
+                if (current_page > 1) {
+                    current_page--;
+                    changePage(current_page);
                 }
-            });
+            }
 
-            $('.item-actions-toggle-btn').on('click', function (e) {
-                e.preventDefault();
-                var $thisActionList = $(this).closest('.item-actions-dropdown');
-                $itemActions.not($thisActionList).removeClass('active');
-                $thisActionList.toggleClass('active');
-            });
-        }
-        function changePage(page) {
-            var btn_next = document.getElementById("btn_next");
-            var btn_prev = document.getElementById("btn_prev");
-            var list = document.getElementById("appendItem");
-            var page_span = document.getElementById("page");
-            if (page < 1) page = 1;
-            if (page > numPages()) page = numPages();
+            function nextPage() {
+                if (current_page < numPages()) {
+                    current_page++;
+                    changePage(current_page);
+                }
+            }
+            function init() {
+                var $itemActions = $(".item-actions-dropdown");
 
-            list.innerHTML = "";
+                $(document).on('click', function (e) {
+                    if (!$(e.target).closest('.item-actions-dropdown').length) {
+                        $itemActions.removeClass('active');
+                    }
+                });
 
-            for (var i = (page - 1) * records_per_page; i < (page * records_per_page) && i < objJson.length; i++) {
-                list.innerHTML += ` <li class="item">
+                $('.item-actions-toggle-btn').on('click', function (e) {
+                    e.preventDefault();
+                    var $thisActionList = $(this).closest('.item-actions-dropdown');
+                    $itemActions.not($thisActionList).removeClass('active');
+                    $thisActionList.toggleClass('active');
+                });
+            }
+            function changePage(page) {
+                var btn_next = document.getElementById("btn_next");
+                var btn_prev = document.getElementById("btn_prev");
+                var list = document.getElementById("appendItem");
+                var page_span = document.getElementById("page");
+                if (page < 1) page = 1;
+                if (page > numPages()) page = numPages();
+
+                list.innerHTML = "";
+
+                for (var i = (page - 1) * records_per_page; i < (page * records_per_page) && i < object.length; i++) {
+                    list.innerHTML += `<li class="item">
                     <div class="item-row">
                         <div class="item-col fixed item-col-check">
                             <label class="item-check" id="select-all-items">
@@ -495,31 +701,30 @@
                                 <span></span>
                             </label>
                         </div>
-
+                        <div class="item-col fixed item-col-img md" style="justify-content: center;">
+                            <span>#${object[i].id}</span>
+                        </div>
                         <div class="item-col fixed pull-left item-col-title">
-                            <div class="item-heading">Tên dịch vụ</div>
+                            <div class="item-heading">Người bình luận</div>
                             <div>
                                 <a>
-                                    <h4 class="item-title">${objJson[i].name}</h4>
+                                    <h4 class="item-title">${object[i].name}</h4>
                                 </a>
                             </div>
                         </div>
-                        <div class="item-col item-col-sales">
-                            <div class="item-heading">Mã dịch vụ</div>
-                            <div class="sales" style="text-align: center"> ${objJson[i].id} </div>
-                        </div>
+
                         <div class="item-col item-col-stats no-overflow">
-                            <div class="item-heading">Đã bán</div>
-                            <div class="no-overflow"> ${Math.floor(Math.random() * 10000)}
+                            <div class="item-heading">Tên sự kiện</div>
+                            <div class="no-overflow" style="font-size: 16px"> ${object[i].reply}
+                            </div>
+                        </div>
+                        <div class="item-col item-col-category no-overflow">
+                            <div class="item-heading">Phương thức HTTP</div>
+                            <div class="no-overflow">
+                                <a>${object[i].countLike}</a>
                             </div>
                         </div>
 
-                        <div class="item-col item-col-author">
-                            <div class="item-heading">Trạng Thái</div>
-                            <div class="no-overflow" style="text-align: center">
-                                <a>${Math.floor(Math.random() * 2) == 1 ? "active" : "hidden"}</a>
-                            </div>
-                        </div>
                         <div class="item-col item-col-date">
                             <div class="item-heading">Ngày thêm</div>
                             <div class="no-overflow"> ${getRandomDate()} </div>
@@ -542,7 +747,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="edit" href="item-editor.html">
+                                             <a class="edit" href="comments-editor.html">
                                                 <i class="fa fa-pencil"></i>
                                             </a>
                                         </li>
@@ -552,38 +757,31 @@
                         </div>
                     </div>
                 </li>`
-                init()
+                    init()
+                }
+                page_span.innerHTML = page;
+
+                if (page == 1) {
+                    btn_prev.style.visibility = "hidden";
+                } else {
+                    btn_prev.style.visibility = "visible";
+                }
+
+                if (page == numPages()) {
+                    btn_next.style.visibility = "hidden";
+                } else {
+                    btn_next.style.visibility = "visible";
+                }
             }
-            page_span.innerHTML = page;
 
-            if (page == 1) {
-                btn_prev.style.visibility = "hidden";
-            } else {
-                btn_prev.style.visibility = "visible";
+            function numPages() {
+                return Math.ceil(object.length / records_per_page);
             }
 
-            if (page == numPages()) {
-                btn_next.style.visibility = "hidden";
-            } else {
-                btn_next.style.visibility = "visible";
-            }
-        }
-
-        function numPages() {
-            return Math.ceil(objJson.length / records_per_page);
-        }
-
-        window.onload = function () {
-            changePage(1);
-        };
-
-        function getRandomDate() {
-            const maxDate = Date.now();
-            const timestamp = Math.floor(Math.random() * maxDate);
-            var d = new Date(timestamp);
-            return d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear();
-        }
-    </script>
+            window.onload = function () {
+                changePage(1);
+            };
+        </script>
 </body>
 
 </html>

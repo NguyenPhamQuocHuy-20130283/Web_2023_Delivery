@@ -152,25 +152,6 @@
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa fa-area-chart"></i> Báo cáo
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-
-                                <li>
-                                    <a href="comments-list.html"> Danh sách báo cáo </a>
-                                </li>
-                            </ul>
-                            <ul class="sidebar-nav">
-
-                                <li>
-                                    <a href="add-comments.html"> Thêm báo cáo </a>
-                                </li>
-                            </ul>
-
-                        </li>
-                        <li>
-                            <a href="">
                                 <i class="fa fa-area-chart"></i> Thống kê
                                 <i class="fa arrow"></i>
                             </a>
@@ -271,55 +252,34 @@
         <div class="mobile-menu-handle"></div>
         <article class="content item-editor-page">
             <div class="title-block">
-                <h3 class="title"> Thêm thông tin người dùng
+                <h3 class="title"> Sửa bản ghi
                     <span class="sparkline bar" data-type="bar"></span>
+
                 </h3>
             </div>
             <form name="item">
                 <div class="card card-block">
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Tên đăng nhập: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tên người ghi: </label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control boxed" placeholder="Nhập tên">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Email: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tên sự kiện: </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control boxed" placeholder="Nhập email">
+                            <input type="text" class="form-control boxed" placeholder="Nhập tên">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Password: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Phương thức HTTP: </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control boxed" placeholder="Nhập password">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Vai trò: </label>
-                        <div class="col-sm-10">
-                            <select class="form-control boxed" style="width: 200px">
-                                <option value="option1">Khách hàng</option>
-                                <option value="option2">Nhân Viên</option>
-                                <option value="option3">Quản lý</option>
-                                <!-- Thêm các tùy chọn khác ở đây -->
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> SĐT: </label>
-                        <div class="col-sm-10">
-                            <input type="text" style="width:200px" class="form-control boxed" placeholder="Nhập sđt">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ: </label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control boxed" placeholder="Nhập...">
+                            <input type="text" class="form-control boxed" placeholder="Nhập Phương thức">
                         </div>
                     </div>
 
-                    </div>
+
+
                     <div class="form-group row">
                         <div class="col-sm-10 col-sm-offset-2">
                             <button type="submit" class="btn btn-primary"> Lưu </button>
@@ -332,10 +292,10 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Thư viện ảnh</h4>
+                        <h4 class="modal-title">Media Library</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">Đóng</span>
+                            <span class="sr-only">Close</span>
                         </button>
                     </div>
                     <div class="modal-body modal-tab-container">
@@ -468,18 +428,18 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            <i class="fa fa-warning"></i> Lưu ý
+                            <i class="fa fa-warning"></i> Alert
                         </h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Bạn có muốn thực hiện hành động này?</p>
+                        <p>Are you sure want to do this?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Có</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                     </div>
                 </div>
                 <!-- /.modal-content -->
