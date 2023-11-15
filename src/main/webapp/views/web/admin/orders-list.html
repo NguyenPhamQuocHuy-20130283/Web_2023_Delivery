@@ -322,20 +322,7 @@
                                 <div class="col">
                                     <div class="">
                                         <div class="row no-gutters">
-                                            <div class="col-auto pr-3">
-                                                <div class="filter-options__childrent__dropdown__menu">
-                                                    <svg class="svg-next-icon svg-next-icon-size-14" width="14"
-                                                        height="14">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
-                                                            <g>
-                                                                <path
-                                                                    d="M178.5,382.5h102v-51h-102V382.5z M0,76.5v51h459v-51H0z M76.5,255h306v-51h-306V255z">
-                                                                </path>
-                                                            </g>
-                                                        </svg></svg><span class="ml-3 d-none d-sm-inline-block">Thêm
-                                                        điều kiện lọc</span>
-                                                </div>
-                                            </div>
+
                                             <div class="col">
                                                 <div class="next-input--stylized">
                                                     <div class="next-input-add-on next-input__add-on--before">
@@ -406,6 +393,9 @@
                                                     <th class="table-header--status">
                                                         <span>Địa chỉ giao hàng</span>
                                                     </th>
+                                                    <th class="table-header--status">
+                                                        <span>Tên người nhận</span>
+                                                    </th>
                                                     <th class="table-header--money">
                                                         <span>Tổng tiền</span>
                                                     </th>
@@ -451,7 +441,7 @@
                                                                 <div class="order_list_customer">
                                                                     <p class="mb-0 px-2 align-items-center word-break">
                                                                         <span class="omni-shorten-text"
-                                                                            title="nguyenhien">nguyenhien</span> 
+                                                                            title="nguyenhien">nguyenhien</span>
                                                                     </p>
                                                                 </div>
                                                             </span>
@@ -702,7 +692,29 @@
         );
         ga("create", "UA-80463319-4", "auto");
         ga("send", "pageview");
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const tableRows = document.querySelectorAll('.ui-table tbody tr');
+
+            searchInput.addEventListener('input', filterTable);
+
+            function filterTable() {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                tableRows.forEach(row => {
+                    const rowData = Array.from(row.children).map(cell => cell.textContent.toLowerCase());
+                    const rowContainsSearchTerm = rowData.some(data => data.includes(searchTerm));
+
+                    if (rowContainsSearchTerm) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+        });
     </script>
+
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/vendor.js"></script>
     <script src="./js/app.js"></script>
