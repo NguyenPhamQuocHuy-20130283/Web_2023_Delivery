@@ -79,7 +79,7 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="fa fa-gear icon"></i> Cài đặt </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.html">
+                                <a class="dropdown-item" href="../landings/landing/login.html">
                                     <i class="fa fa-power-off icon"></i> Đăng xuất </a>
                             </div>
                         </li>
@@ -112,33 +112,28 @@
                                 </a>
                                 <ul class="sidebar-nav">
                                     <li>
-                                        <a href="#"> dịch vụ<i class="fa arrow"></i></a>
+                                        <a href="#"> Dịch vụ<i class="fa arrow"></i></a>
                                         <ul class="sidebar-nav">
                                             <li>
                                                 <a href="./items-list.html"> Danh sách dịch vụ </a>
                                             </li>
+
                                             <li>
-                                                <a href="./item-editor.html"> Chỉnh sửa dịch vụ </a>
+                                                <a href="./add-item.html"> Thêm dịch vụ </a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="#"> Bài báo <i class="fa arrow"></i></a>
-                                        <ul class="sidebar-nav">
-                                            <li>
-                                                <a href="./posts-list.html"> Danh sách bài báo </a>
-                                            </li>
-                                            <li>
-                                                <a href="./post-editor.html"> Chỉnh sửa bài báo</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+
                                     <li>
                                         <a href="#"> Đơn hàng <i class="fa arrow"></i></a>
                                         <ul class="sidebar-nav">
                                             <li>
                                                 <a href="./orders-list.html"> Danh sách đơn hàng </a>
                                             </li>
+                                            <li>
+                                                <a href="./add-order.html"> Thêm đơn hàng </a>
+                                            </li>
+
                                         </ul>
                                     </li>
                                     <li>
@@ -147,13 +142,33 @@
                                             <li>
                                                 <a href="./users-list.html"> Danh sách người dùng </a>
                                             </li>
+
                                             <li>
-                                                <a href="./user-editor.html"> Chỉnh sửa thông tin người dùng</a>
+                                                <a href="./add-users.html"> Thêm người dùng</a>
                                             </li>
                                         </ul>
                                     </li>
 
                                 </ul>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-area-chart"></i> Báo cáo
+                                    <i class="fa arrow"></i>
+                                </a>
+                                <ul class="sidebar-nav">
+
+                                    <li>
+                                        <a href="comments-list.html"> Danh sách báo cáo </a>
+                                    </li>
+                                </ul>
+                                <ul class="sidebar-nav">
+
+                                    <li>
+                                        <a href="add-comments.html"> Thêm báo cáo </a>
+                                    </li>
+                                </ul>
+
                             </li>
                             <li>
                                 <a href="">
@@ -163,7 +178,7 @@
                                 <ul class="sidebar-nav">
 
                                     <li>
-                                        <a href="static-tables.html"> Bảng </a>
+                                        <a href="static-tables.html"> Bảng  </a>
                                     </li>
                                 </ul>
                             </li>
@@ -270,8 +285,8 @@
                                                 <i class="fa fa-rocket"></i>
                                             </div>
                                             <div class="stat">
-                                                <div class="value"> 5407 </div>
-                                                <div class="name"> dịch vụ hoạt động </div>
+                                                <div class="value"> 3 </div>
+                                                <div class="name"> Dịch vụ hoạt động </div>
                                             </div>
                                             <div class="progress stat-progress">
                                                 <div class="progress-bar" style="width: 75%;"></div>
@@ -366,8 +381,8 @@
                             <div class="card sameheight-item items" data-exclude="xs,sm,lg">
                                 <div class="card-header bordered">
                                     <div class="header-block">
-                                        <h3 class="title"> dịch vụ bán chạy </h3>
-                                        <a href="item-editor.html" class="btn btn-primary btn-sm"> Thêm dịch vụ</a>
+                                        <h3 class="title"> Dịch vụ bán chạy </h3>
+                                        <a href="add-item.html" class="btn btn-primary btn-sm"> Thêm dịch vụ</a>
                                     </div>
                                     <div class="header-block pull-right">
                                         <label class="search">
@@ -514,13 +529,7 @@
                 var listProducts = object.map(function(element) {
                         return `<li class="item blogBox moreBox" style="display:none">
                         <div class="item-row">
-                            <div class="item-col fixed item-col-img xs">
-                                <a href="">
-                                    <div class="item-img xs rounded">
-                                        <img src="../assets/imgProduct/images/${element.imglink}" width=30px height=30px></img>
-                                    </div>
-                                </a>
-                            </div>
+
                             <div class="item-col item-col-title no-overflow">
                                 <div>
                                     <h4 class="item-title no-wrap"> ${element.name} </h4>
