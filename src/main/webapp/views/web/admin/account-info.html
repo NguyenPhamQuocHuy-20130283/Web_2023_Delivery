@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <!-- Theme initialization -->
+    <link rel="stylesheet" href="./css/vendor.css">
     <script>
         var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
             {};
@@ -52,7 +51,9 @@
                                 </sup>
                             </a>
                             <div class="dropdown-menu notifications-dropdown-menu">
+                                <ul class="notifications-container">
 
+                                </ul>
                                 <footer>
                                     <ul>
                                         <li>
@@ -250,171 +251,111 @@
             <div class="sidebar-overlay" id="sidebar-overlay"></div>
             <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
             <div class="mobile-menu-handle"></div>
-            <article class="content item-editor-page">
-                <div class="title-block">
-                    <h3 class="title"> Sửa dịch vụ
-                        <span class="sparkline bar" data-type="bar"></span>
-                    </h3>
-                </div>
-                <form name="item">
-                    <div class="card card-block">
-                        <div class="form-group row">
-                            <label class="col-sm-2 form-control-label text-xs-right"> Tên dịch vụ: </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control boxed" placeholder="Nhập tên">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 form-control-label text-xs-right"> Giá: </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control boxed" placeholder="Nhập giá">
-                            </div>
-                        </div>
-
-
-
-                        <div class="form-group row">
-                            <div class="col-sm-10 col-sm-offset-2">
-                                <button type="submit" class="btn btn-primary"> Lưu </button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </article>
-            <div class="modal fade" id="modal-media">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Media Library</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                <span class="sr-only">Close</span>
-                            </button>
-                        </div>
-                        <div class="modal-body modal-tab-container">
-                            <ul class="nav nav-tabs modal-tabs" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#gallery" data-toggle="tab" role="tab">Gallery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#upload" data-toggle="tab" role="tab">Upload</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content modal-tab-content">
-                                <div class="tab-pane fade" id="gallery" role="tabpanel">
-                                    <div class="images-container">
-                                        <div class="row">
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-sm-4 col-md-4 col-lg-3">
-                                                <div class="image-container">
-                                                    <div class="image"
-                                                        style="background-image:url('https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+            <article class="content dashboard-page">
+                <section class="section">
+                    <div class="row sameheight-container">
+                        <!-- Existing content (dịch vụ bán chạy, Phương thức thanh toán) -->
+            
+                        <!-- New content for user account information and bank details -->
+                        <div class="col-xl-8">
+                            <div class="card sameheight-item user-account" data-exclude="xs,sm,lg">
+                                <div class="card-header bordered">
+                                    <div class="header-block">
+                                        <h3 class="title">Thông tin tài khoản</h3>
+                                    </div>
+                                    <div class="header-block pull-right">
+                                        <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#updateAccountModal">Cập nhật thông tin</a>
+                                        <a href="#" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#changePasswordModal">Đổi mật khẩu</a>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade active in" id="upload" role="tabpanel">
-                                    <div class="upload-container">
-                                        <div id="dropzone">
-                                            <form action="/" method="POST" enctype="multipart/form-data"
-                                                class="dropzone needsclick dz-clickable" id="demo-upload">
-                                                <div class="dz-message-block">
-                                                    <div class="dz-message needsclick"> Drop files here or click to
-                                                        upload. </div>
-                                                </div>
-                                            </form>
-                                        </div>
+                                <div class="card-block">
+                                    <!-- Display user account information here -->
+                                    <!-- For example: -->
+                                    <div class="form-group">
+                                        <label for="username">Tên người dùng:</label>
+                                        <input type="text" id="username" class="form-control" value="Admin">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" class="form-control" value="admin@gmail.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Địa chỉ:</label>
+                                        <input type="text" id="address" class="form-control" value="Hanoi, Vietnam">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Số điện thoại:</label>
+                                        <input type="phone" id="phone" class="form-control" value="0374162824">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Mật khẩu: </label>
+                                        <input type="password" id="password" class="form-control" value="0374162824">
                                     </div>
                                 </div>
                             </div>
+
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Insert Selected</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
+            <!-- Change Password Modal -->
+<div class="modal fade" id="changePasswordModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Đổi mật khẩu</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body">
+                <!-- Add your form fields for changing password -->
+                <form>
+                    <div class="form-group">
+                        <label for="currentPassword">Mật khẩu hiện tại:</label>
+                        <input type="password" class="form-control" id="currentPassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">Mật khẩu mới:</label>
+                        <input type="password" class="form-control" id="newPassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmNewPassword">Xác nhận mật khẩu mới:</label>
+                        <input type="password" class="form-control" id="confirmNewPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+                        <div class="col-xl-4">
+                            <div class="card sameheight-item" data-exclude="xs,sm,lg">
+                                <div class="card-header">
+                                    <div class="header-block">
+                                        <h3 class="title">Thêm thông tin ngân hàng</h3>
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="bankName">Tên ngân hàng:</label>
+                                            <input type="text" class="form-control" id="bankName" placeholder="Nhập tên ngân hàng">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="accountName">Tên tài khoản:</label>
+                                            <input type="text" class="form-control" id="accountName" placeholder="Nhập tên tài khoản">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="accountNumber">Số tài khoản:</label>
+                                            <input type="text" class="form-control" id="accountNumber" placeholder="Nhập số tài khoản">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Lưu thông tin ngân hàng</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of new content for user account information and bank details -->
+                    </div>
+                </section>
+            </article>
             <!-- /.modal -->
             <div class="modal fade" id="confirm-modal">
                 <div class="modal-dialog" role="document">
@@ -465,25 +406,92 @@
         ga('create', 'UA-80463319-4', 'auto');
         ga('send', 'pageview');
     </script>
+    <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/vendor.js"></script>
     <script src="js/app.js"></script>
     <script>
-        $('.foo').click(function () {
-            $(this).toggleClass('active');
-        })
-        $('.size').click(function () {
-            $(this).toggleClass('active');
-        })
-    </script>
-    <script>
-        $('.form-control').on('change', function () {
-            if ($(this).val() == 'other') {
-                $(this).after('<input placeholder="Nhập..." type="text" name="' + $(this).attr('name') + '" class="otherInput form-control boxed" style="width:50% !important; margin-top:5px;border: 1px solid #ced4da;border-radius: 0.25rem;"/>');
-            } else {
-                if ($(this).next().is('input.otherInput')) {
-                    $(this).next().remove();
-                };
-            };
+        function getRandomDate() {
+            const maxDate = Date.now();
+            const timestamp = Math.floor(Math.random() * maxDate);
+            var d = new Date(timestamp);
+            return d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear();
+        }
+        $(document).ready(function() {
+            var object = $.parseJSON(`[
+            {
+            "id": "1",
+            "name": "Giao hàng nhanh",
+            "price": "420000",
+            "categories": "nội địa",
+            "imglink": "",
+            "type": "",
+            "subimglink": "",
+            "time": ""
+        },
+        {
+            "id": "2",
+            "name": "Giao hàng siêu tốc",
+            "price": "420000",
+            "categories": "nội địa",
+            "imglink": "",
+            "type": "",
+            "subimglink": "",
+            "time": ""
+        },
+        {
+            "id": "3",
+            "name": "Giao ngoại địa",
+            "price": "420000",
+            "categories": "Ngoại địa",
+            "imglink": "",
+            "type": "",
+            "subimglink": "",
+            "time": ""
+        }]`);
+            function initRender() {
+                var listProducts = object.map(function(element) {
+                        return `<li class="item blogBox moreBox" style="display:none">
+                        <div class="item-row">
+
+                            <div class="item-col item-col-title no-overflow">
+                                <div>
+                                    <h4 class="item-title no-wrap"> ${element.name} </h4>
+                                </div>
+                            </div>
+                            <div class="item-col item-col-sales">
+                                <div class="item-heading">Đã bán</div>
+                                <div> ${Math.floor(Math.random() * 10000)} </div>
+                            </div>
+                            <div class="item-col item-col-stats">
+                                <div class="item-heading">Tồn kho</div>
+                                <div class="no-overflow">
+                                    <div class="item-stats" data-type="bar"> ${Math.floor(Math.random() * 100)}</div>
+                                </div>
+                            </div>
+                            <div class="item-col item-col-date">
+                                <div class="item-heading">Ngày thêm</div>
+                                <div> ${getRandomDate()} </div>
+                            </div>
+                        </div>
+                    </li>`
+                })
+                var renderList = listProducts.join('');
+                $('#items').html(renderList);
+            }
+            initRender();
+            function defaultLoadmore() {
+                $(".moreBox").slice(0, 6).show();
+                $("#loadMore").click(function (e) {
+                  e.preventDefault();
+                  $(".moreBox:hidden").slice(0, 6).show();
+                  $(".col-xl-8").css({"overflow":"auto"})
+                });
+            }
+            defaultLoadmore();
+            $("#loadLess").click(function() {
+                initRender();
+                defaultLoadmore();
+            });
         });
     </script>
 </body>
