@@ -82,20 +82,16 @@ body {
   width: 200px;
 }
 /* end of nav bar */
-.not_allowed_packet{
-    margin: 0 20px;
-    display: flex;
-    flex-direction: column;
-}
-.not_allowed_packet1{
-    width: 90%;
-    margin: 0 auto;
-}
-h1{
-    color: #00467f;
+.email_verification{
     text-align: center;
+    width: 320px;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 20px auto;
+    background-color: #fffafa;
 }
-/* end of not_allowed_packet.css */
+/* end of email_verification.css */
 .Footer {
   position: sticky;
   bottom: 0px;

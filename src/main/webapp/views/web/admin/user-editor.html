@@ -10,6 +10,8 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="css/vendor.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <!-- Theme initialization -->
     <script>
         var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
@@ -152,13 +154,32 @@
                             </li>
                             <li>
                                 <a href="">
+                                    <i class="fa fa-area-chart"></i> Báo cáo
+                                    <i class="fa arrow"></i>
+                                </a>
+                                <ul class="sidebar-nav">
+
+                                    <li>
+                                        <a href="comments-list.html"> Danh sách báo cáo </a>
+                                    </li>
+                                </ul>
+                                <ul class="sidebar-nav">
+
+                                    <li>
+                                        <a href="add-comments.html"> Thêm báo cáo </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <a href="">
                                     <i class="fa fa-area-chart"></i> Thống kê
                                     <i class="fa arrow"></i>
                                 </a>
                                 <ul class="sidebar-nav">
 
                                     <li>
-                                        <a href="static-tables.html"> Bảng </a>
+                                        <a href="static-tables.html"> Bảng  </a>
                                     </li>
                                 </ul>
                             </li>
@@ -293,7 +314,32 @@
                                 <input type="text" class="form-control boxed" placeholder="Nhập...">
                             </div>
                         </div>
-
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Tỉnh/Thành phố: </label>
+                            <div class="col-sm-10">
+                                <select class="form-control boxed" id="provinceDropdown" style="width:200px">
+                                    <!-- Options will be dynamically added here via JavaScript -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Huyện/Quận: </label>
+                            <div class="col-sm-10">
+                                <select class="form-control boxed" id="districtDropdown" style="width:200px">
+                                    <!-- Options will be dynamically added here via JavaScript -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label class="col-sm-2 form-control-label text-xs-right"> Xã/Phường: </label>
+                            <div class="col-sm-10">
+                                <select class="form-control boxed" id="wardDropdown" style="width:200px">
+                                    <!-- Options will be dynamically added here via JavaScript -->
+                                </select>
+                            </div>
+                        </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-10 col-sm-offset-2">
@@ -506,6 +552,67 @@
                     $(this).next().remove();
                 };
             };
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Lấy dữ liệu tỉnh/thành phố từ API
+            axios.get('https://provinces.open-api.vn/api/?depth=2')
+                .then(function (response) {
+                    // Xử lý dữ liệu và cập nhật dropdown tỉnh/thành phố
+                    var provinceDropdown = document.getElementById('provinceDropdown');
+                    response.data.forEach(function (province) {
+                        var option = document.createElement('option');
+                        option.value = province.code;
+                        option.text = province.name;
+                        provinceDropdown.add(option);
+                    });
+                })
+                .catch(function (error) {
+                    console.error('Error fetching provinces:', error);
+                });
+    
+            // Gán sự kiện onchange cho dropdown tỉnh/thành phố để cập nhật dropdown huyện/quận
+            var provinceDropdown = document.getElementById('provinceDropdown');
+            var districtDropdown = document.getElementById('districtDropdown');
+            var wardDropdown = document.getElementById('wardDropdown');
+    
+            provinceDropdown.addEventListener('change', function () {
+                // Lấy dữ liệu huyện/quận từ API dựa vào tỉnh/thành phố đã chọn
+                axios.get(`https://provinces.open-api.vn/api/p/${provinceDropdown.value}?depth=2`)
+                    .then(function (response) {
+                        // Xử lý dữ liệu và cập nhật dropdown huyện/quận
+                        districtDropdown.innerHTML = '<option value="">Chọn huyện/quận</option>';
+                        response.data.districts.forEach(function (district) {
+                            var option = document.createElement('option');
+                            option.value = district.code;
+                            option.text = district.name;
+                            districtDropdown.add(option);
+                        });
+                    })
+                    .catch(function (error) {
+                        console.error('Error fetching districts:', error);
+                    });
+            });
+    
+            // Gán sự kiện onchange cho dropdown huyện/quận để cập nhật dropdown xã/phường
+            districtDropdown.addEventListener('change', function () {
+                // Lấy dữ liệu xã/phường từ API dựa vào huyện/quận đã chọn
+                axios.get(`https://provinces.open-api.vn/api/d/${districtDropdown.value}?depth=2`)
+                    .then(function (response) {
+                        // Xử lý dữ liệu và cập nhật dropdown xã/phường
+                        wardDropdown.innerHTML = '<option value="">Chọn xã/phường</option>';
+                        response.data.wards.forEach(function (ward) {
+                            var option = document.createElement('option');
+                            option.value = ward.code;
+                            option.text = ward.name;
+                            wardDropdown.add(option);
+                        });
+                    })
+                    .catch(function (error) {
+                        console.error('Error fetching wards:', error);
+                    });
+            });
         });
     </script>
 </body>
