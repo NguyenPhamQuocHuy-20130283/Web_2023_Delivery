@@ -17,7 +17,7 @@ public class DBContext {
     private static final String instance = "";// LEAVE THIS ONE EMPTY IF YOUR SQL IS A SINGLE INSTANCE
     private static final String userID = "root";
     private static final String password = "";
-    private static BasicDataSource dataSource;
+    private static final BasicDataSource dataSource;
     static Jdbi jdbi;
 
     public static Jdbi me() {
