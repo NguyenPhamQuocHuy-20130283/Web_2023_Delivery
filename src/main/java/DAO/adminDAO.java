@@ -6,12 +6,11 @@ import model.Account;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class accountDAO {
+public class adminDAO {
     Connection conn = null;
     PreparedStatement ps = null;
     ResultSet rs = null;
