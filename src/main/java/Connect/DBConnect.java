@@ -1,16 +1,12 @@
-package vn.edu.hcmuaf.fit.context;
+package Connect;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.jdbi.v3.core.Jdbi;
-import vn.edu.hcmuaf.fit.entity.Type;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
-import java.util.stream.Collectors;
 
-
-public class DBContext {
+public class DBConnect {
     private static final String serverName = "localhost";
     private static final String dbName = "app_food";
     private static final String portNumber = "3306";
@@ -41,7 +37,7 @@ public class DBContext {
         dataSource.setMinIdle(2);
     }
 
-    private DBContext() {
+    public DBConnect() {
     }
 
     public static Connection getConnection() throws SQLException {
@@ -49,12 +45,8 @@ public class DBContext {
     }
 
     public static void main(String[] args) throws Exception {
-		Jdbi me = DBContext.me();
-		List<Type> list = me.withHandle(handle -> {
-			return handle.createQuery("select  * from types").mapToBean(Type.class).stream()
-					.collect(Collectors.toList());
-		});
-		System.out.println(list);
+        Connection conn = DBConnect.getConnection();
+        System.out.println(conn);
     }
 
 }
