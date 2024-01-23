@@ -152,7 +152,18 @@
                                             </li>
                                         </ul>
                                     </li>
+                                    <li>
+                                        <a href="#">  Cửa hàng <i class="fa arrow"></i></a>
+                                        <ul class="sidebar-nav">
+                                            <li>
+                                                <a href="./store-list.html"> Danh sách cửa hàng </a>
+                                            </li>
 
+                                            <li>
+                                                <a href="./add-store.html"> Thêm cửa hàng</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -325,7 +336,7 @@
                                 </div>
                                 <div class="item-col item-col-header item-col-stats">
                                     <div class="no-overflow">
-                                        <span>Đã bán</span>
+                                        <span>Đơn giá</span>
                                     </div>
                                 </div>
 
@@ -429,7 +440,7 @@
         {
             "id": "2",
             "name": "Giao hàng siêu tốc",
-            "price": "420000",
+            "price": "50000",
             "categories": "nội địa",
             "imglink": "",
             "type": "",
@@ -509,8 +520,8 @@
                             <div class="sales" style="text-align: center"> ${objJson[i].id} </div>
                         </div>
                         <div class="item-col item-col-stats no-overflow">
-                            <div class="item-heading">Đã bán</div>
-                            <div class="no-overflow"> ${Math.floor(Math.random() * 10000)}
+                            <div class="item-heading">Đơn giá</div>
+                            <div class="no-overflow"> ${objJson[i].price} 
                             </div>
                         </div>
 

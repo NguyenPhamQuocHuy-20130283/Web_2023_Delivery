@@ -3298,7 +3298,7 @@ span a {
 .items-list-page .item-list .item-col.item-col-img {
   text-align: left;
   width: auto;
-  text-align: center;
+  text-align: left;
   -ms-flex-preferred-size: 70px;
   flex-basis: 70px;
 }
@@ -4420,7 +4420,16 @@ span a {
   position: relative;
   margin-left: 10px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 @media (max-width: 767.98px) {
   .header .header-block-nav .profile-dropdown-menu {
     margin-top: 8px;
