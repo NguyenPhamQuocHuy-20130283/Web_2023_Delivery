@@ -43,7 +43,7 @@ public class AccountDAO {
     }
 
     public static void removeAccount(String uid) {
-        String query = "DELETE FROM Account WHERE [uid] = ?";
+        String query = "DELETE FROM Account WHERE uid = ?";
         try {
             Connection conn = DBConnect.getConnection();
             PreparedStatement ps = conn.prepareStatement(query);
