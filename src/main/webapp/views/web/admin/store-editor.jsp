@@ -71,11 +71,7 @@
                             <span class="name"> Admin </span>
                         </a>
                         <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
-<<<<<<<< Updated upstream:src/main/webapp/views/web/admin/comments-editor.html
-                            <a class="dropdown-item" href="#">
-========
                             <a class="dropdown-item" href="account-info.jsp">
->>>>>>>> Stashed changes:src/main/webapp/views/web/admin/comments-editor.jsp
                                 <i class="fa fa-user icon"></i> Tài khoản </a>
                             <a class="dropdown-item" href="#">
                                 <i class="fa fa-bell icon"></i> Thông báo </a>
@@ -105,7 +101,7 @@
                 <nav class="menu">
                     <ul class="sidebar-menu metismenu" id="sidebar-menu">
                         <li class="active">
-                            <a href="index.html">
+                            <a href="index.jsp">
                                 <i class="fa fa-home"></i> Tổng quan </a>
                         </li>
                         <li>
@@ -118,7 +114,7 @@
                                     <a href="#"> Dịch vụ<i class="fa arrow"></i></a>
                                     <ul class="sidebar-nav">
                                         <li>
-                                            <a href="./items-list.html"> Danh sách dịch vụ </a>
+                                            <a href="items-list.jsp"> Danh sách dịch vụ </a>
                                         </li>
 
                                         <li>
@@ -131,7 +127,7 @@
                                     <a href="#"> Đơn hàng <i class="fa arrow"></i></a>
                                     <ul class="sidebar-nav">
                                         <li>
-                                            <a href="./orders-list.html"> Danh sách đơn hàng </a>
+                                            <a href="orders-list.jsp"> Danh sách đơn hàng </a>
                                         </li>
                                         <li>
                                             <a href="add-order.jsp"> Thêm đơn hàng </a>
@@ -151,17 +147,21 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li>
+                                    <a href="#">  Cửa hàng <i class="fa arrow"></i></a>
+                                    <ul class="sidebar-nav">
+                                        <li>
+                                            <a href="./store-list.html"> Danh sách cửa hàng </a>
+                                        </li>
 
-<<<<<<<< Updated upstream:src/main/webapp/views/web/admin/comments-editor.html
-========
                                         <li>
                                             <a href="add-store.jsp"> Thêm cửa hàng</a>
                                         </li>
                                     </ul>
                                 </li>
->>>>>>>> Stashed changes:src/main/webapp/views/web/admin/comments-editor.jsp
                             </ul>
                         </li>
+
                         <li>
                             <a href="">
                                 <i class="fa fa-area-chart"></i> Thống kê
@@ -170,7 +170,7 @@
                             <ul class="sidebar-nav">
 
                                 <li>
-                                    <a href="static-tables.html"> Bảng </a>
+                                    <a href="static-tables.jsp">  Bảng  </a>
                                 </li>
                             </ul>
                         </li>
@@ -264,50 +264,93 @@
         <div class="mobile-menu-handle"></div>
         <article class="content item-editor-page">
             <div class="title-block">
-                <h3 class="title"> Sửa bản ghi
+                <h3 class="title"> Chỉnh sửa cửa hàng
                     <span class="sparkline bar" data-type="bar"></span>
-
                 </h3>
             </div>
             <form name="item">
                 <div class="card card-block">
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Tên người ghi: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tên cửa hàng: </label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control boxed" placeholder="Nhập tên">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Tên sự kiện: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Email: </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control boxed" placeholder="Nhập tên">
+                            <input type="text" class="form-control boxed" placeholder="Nhập email">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-2 form-control-label text-xs-right"> Phương thức HTTP: </label>
+                        <label class="col-sm-2 form-control-label text-xs-right"> Vai trò: </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control boxed" placeholder="Nhập Phương thức">
+                            <select class="form-control boxed" style="width: 200px">
+                                <option value="option3">Quản lý</option>
+                                <option value="option1">Khách hàng</option>
+                                <option value="option2">Nhân Viên</option>
+                            </select>
                         </div>
                     </div>
-
-
-
                     <div class="form-group row">
-                        <div class="col-sm-10 col-sm-offset-2">
-                            <button type="submit" class="btn btn-primary"> Lưu </button>
+                        <label class="col-sm-2 form-control-label text-xs-right"> SĐT: </label>
+                        <div class="col-sm-10">
+                            <input type="text" style="width:200px" class="form-control boxed" placeholder="Nhập sđt">
                         </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Địa chỉ: </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control boxed" placeholder="Nhập...">
+                        </div>
+                    </div>
+        
+                    <!-- Thêm ô tìm kiếm người dùng -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Tìm kiếm nhân viên: </label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control boxed" placeholder="Nhập tên nhân viên">
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-secondary">Tìm kiếm</button>
+                        </div>
+                    </div>
+        
+                    <!-- Thêm nút để thêm nhân viên -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"></label>
+                        <div class="col-sm-10">
+                            <button type="button" class="btn btn-primary">Thêm Nhân Viên</button>
+                        </div>
+                    </div>
+        
+                    <!-- Hiển thị danh sách nhân viên -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label text-xs-right"> Danh sách nhân viên: </label>
+                        <div class="col-sm-10">
+                            <ul class="list-group">
+                                <!-- Dùng JavaScript để thêm các mục nhân viên vào đây -->
+                            </ul>
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <button type="submit" class="btn btn-primary"> Lưu </button>
                     </div>
                 </div>
             </form>
         </article>
+        
         <div class="modal fade" id="modal-media">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Media Library</h4>
+                        <h4 class="modal-title">Thư viện ảnh</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">Close</span>
+                            <span class="sr-only">Đóng</span>
                         </button>
                     </div>
                     <div class="modal-body modal-tab-container">
@@ -440,18 +483,18 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            <i class="fa fa-warning"></i> Alert
+                            <i class="fa fa-warning"></i> Lưu ý
                         </h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Are you sure want to do this?</p>
+                        <p>Bạn có muốn thực hiện hành động này?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Có</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
                     </div>
                 </div>
                 <!-- /.modal-content -->

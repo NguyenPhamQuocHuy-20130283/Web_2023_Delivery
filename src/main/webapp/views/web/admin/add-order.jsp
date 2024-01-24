@@ -1,25 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Trang Quản Lý </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Trang Quản Lý</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/vendor.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/orders-list.css" />
+    <style>
+        .input-group-btn {
+            display: flex;
+        }
+    </style>
     <!-- Theme initialization -->
     <script>
-        var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
-            {};
-        var themeName = themeSettings.themeName || '';
+        var themeSettings = localStorage.getItem("themeSettings")
+            ? JSON.parse(localStorage.getItem("themeSettings"))
+            : {};
+        var themeName = themeSettings.themeName || "";
         if (themeName) {
-            document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
-        }
-        else {
-            document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
+            document.write(
+                '<link rel="stylesheet" id="theme-style" href="css/app-' +
+                themeName +
+                '.css">'
+            );
+        } else {
+            document.write(
+                '<link rel="stylesheet" id="theme-style" href="css/app.css">'
+            );
         }
     </script>
 </head>
@@ -37,7 +51,7 @@
                     <form role="search">
                         <div class="input-container">
                             <i class="fa fa-search"></i>
-                            <input type="search" placeholder="Tìm...">
+                            <input type="search" placeholder="Tìm..." />
                             <div class="underline"></div>
                         </div>
                     </form>
@@ -65,25 +79,25 @@
                         <li class="profile dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="true" aria-expanded="false">
-                                <div class="img"
-                                    style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')">
-                                </div>
+                                <div class="img" style="
+                      background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40');
+                    "></div>
                                 <span class="name"> Admin </span>
                             </a>
                             <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
-<<<<<<<< Updated upstream:src/main/webapp/views/web/admin/item-editor.html
-                                <a class="dropdown-item" href="#">
-========
                                 <a class="dropdown-item" href="account-info.jsp">
->>>>>>>> Stashed changes:src/main/webapp/views/web/admin/item-editor.jsp
-                                    <i class="fa fa-user icon"></i> Tài khoản </a>
+                                    <i class="fa fa-user icon"></i> Tài khoản
+                                </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fa fa-bell icon"></i> Thông báo </a>
+                                    <i class="fa fa-bell icon"></i> Thông báo
+                                </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fa fa-gear icon"></i> Cài đặt </a>
+                                    <i class="fa fa-gear icon"></i> Cài đặt
+                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="../landings/landing/login.jsp">
-                                    <i class="fa fa-power-off icon"></i> Đăng xuất </a>
+                                    <i class="fa fa-power-off icon"></i> Đăng xuất
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -105,7 +119,7 @@
                     <nav class="menu">
                         <ul class="sidebar-menu metismenu" id="sidebar-menu">
                             <li class="active">
-                                <a href="index.jsp">
+                                <a href="index.html">
                                     <i class="fa fa-home"></i> Tổng quan </a>
                             </li>
                             <li>
@@ -118,7 +132,7 @@
                                         <a href="#"> Dịch vụ<i class="fa arrow"></i></a>
                                         <ul class="sidebar-nav">
                                             <li>
-                                                <a href="items-list.jsp"> Danh sách dịch vụ </a>
+                                                <a href="./items-list.html"> Danh sách dịch vụ </a>
                                             </li>
 
                                             <li>
@@ -134,51 +148,36 @@
                                                 <a href="./orders-list.html"> Danh sách đơn hàng </a>
                                             </li>
                                             <li>
-                                                <a href="add-order.jsp"> Thêm đơn hàng </a>
+                                                <a href="./add-order.html"> Thêm đơn hàng </a>
                                             </li>
 
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">  Người dùng <i class="fa arrow"></i></a>
+                                        <a href="#"> Người dùng <i class="fa arrow"></i></a>
                                         <ul class="sidebar-nav">
                                             <li>
                                                 <a href="./users-list.html"> Danh sách người dùng </a>
                                             </li>
 
                                             <li>
-                                                <a href="add-users.jsp"> Thêm người dùng</a>
+                                                <a href="./add-users.html"> Thêm người dùng</a>
                                             </li>
                                         </ul>
                                     </li>
-
-<<<<<<<< Updated upstream:src/main/webapp/views/web/admin/item-editor.html
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-area-chart"></i> Báo cáo
-                                    <i class="fa arrow"></i>
-                                </a>
-                                <ul class="sidebar-nav">
-
                                     <li>
-                                        <a href="comments-list.html"> Danh sách báo cáo </a>
-========
+                                        <a href="#">  Cửa hàng <i class="fa arrow"></i></a>
+                                        <ul class="sidebar-nav">
                                             <li>
-                                                <a href="add-store.jsp"> Thêm cửa hàng</a>
+                                                <a href="./store-list.html"> Danh sách cửa hàng </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="./add-store.html"> Thêm cửa hàng</a>
                                             </li>
                                         </ul>
->>>>>>>> Stashed changes:src/main/webapp/views/web/admin/item-editor.jsp
                                     </li>
                                 </ul>
-                                <ul class="sidebar-nav">
-
-                                    <li>
-                                        <a href="add-comments.html"> Thêm báo cáo </a>
-                                    </li>
-                                </ul>
-
                             </li>
                             <li>
                                 <a href="">
@@ -188,7 +187,7 @@
                                 <ul class="sidebar-nav">
 
                                     <li>
-                                        <a href="static-tables.html"> Bảng  </a>
+                                        <a href="static-tables.html"> Bảng </a>
                                     </li>
                                 </ul>
                             </li>
@@ -277,48 +276,206 @@
                     </ul>
                 </footer>
             </aside>
+
             <div class="sidebar-overlay" id="sidebar-overlay"></div>
             <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
             <div class="mobile-menu-handle"></div>
-            <article class="content item-editor-page">
-                <div class="title-block">
-                    <h3 class="title"> Sửa dịch vụ
-                        <span class="sparkline bar" data-type="bar"></span>
-                    </h3>
-                </div>
-                <form name="item">
-                    <div class="card card-block">
-                        <div class="form-group row">
-                            <label class="col-sm-2 form-control-label text-xs-right"> Tên dịch vụ: </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control boxed" placeholder="Nhập tên">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <article class="content item-editor-page">
+                            <div class="title-block">
+                                <h3 class="title"> Thêm thông tin đơn hàng
+                                    <span class="sparkline bar" data-type="bar"></span>
+                                </h3>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-2 form-control-label text-xs-right"> Giá: </label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control boxed" placeholder="Nhập giá">
-                            </div>
-                        </div>
-
-
-
-                        <div class="form-group row">
-                            <div class="col-sm-10 col-sm-offset-2">
-                                <button type="submit" class="btn btn-primary"> Lưu </button>
-                            </div>
-                        </div>
+                            <form name="item">
+                                <div class="card card-block">
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Tên người gửi: </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control boxed" placeholder="Nhập tên">
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Loại giao hàng: </label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control boxed" style="width: 200px">
+                                                <option value="option1">Giao hàng nhanh</option>
+                                                <option value="option2">Giao hàng siêu tốc</option>
+                                                <option value="option3">Giao hàng ngoại địa</option>
+                                                <!-- Thêm các tùy chọn khác ở đây -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Tên gói hàng: </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" style="width:200px" class="form-control boxed"
+                                                placeholder="Nhập tên gói hàng">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> SĐT người gửi: </label>
+                                        <div class="col-sm-10">
+                                            <input type="number" style="width:200px" class="form-control boxed"
+                                                placeholder="Nhập sđt">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Tên người nhận: </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control boxed" placeholder="Nhập tên">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> SĐT người nhận: </label>
+                                        <div class="col-sm-10">
+                                            <input type="number" style="width:200px" class="form-control boxed"
+                                                placeholder="Nhập sđt">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right">Địa chỉ nhận hàng: </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" id="address" class="form-control boxed" placeholder="Nhập tên">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Tỉnh/Thành phố: </label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control boxed" id="provinceDropdown" style="width:200px">
+                                                <!-- Options will be dynamically added here via JavaScript -->
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Huyện/Quận: </label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control boxed" id="districtDropdown" style="width:200px">
+                                                <!-- Options will be dynamically added here via JavaScript -->
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Xã/Phường: </label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control boxed" id="wardDropdown" style="width:200px">
+                                                <!-- Options will be dynamically added here via JavaScript -->
+                                            </select>
+                                        </div>
+                                    </div>
+        
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Cân nặng: </label>
+                                        <div class="col-sm-10">
+                                            <input type="number" class="form-control boxed" placeholder="Nhập...">
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 form-control-label text-xs-right"> Ảnh gói hàng: </label>
+                                        <div class="col-sm-10">
+                                            <div class="images-container">
+                                                <div class="image-container">
+                                                    <div class="controls">
+                                                        <a href="" class="control-btn move">
+                                                            <i class="fa fa-arrows"></i>
+                                                        </a>
+                                                        <a href="" class="control-btn star">
+                                                            <i class="fa"></i>
+                                                        </a>
+                                                        <a href="#" class="control-btn remove" data-toggle="modal"
+                                                            data-target="#confirm-modal">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="image"
+                                                        style="background-image:url('../landings/assets/asset 1.jpeg')"></div>
+                                                </div>
+                                                <a href="#" class="add-image" data-toggle="modal" data-target="#modal-media">
+                                                    <div class="image-container new">
+                                                        <div class="image">
+                                                            <i class="fa fa-plus"></i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 col-sm-offset-2">
+                                        <button type="submit" class="btn btn-primary"> Lưu </button>
+                                    </div>
+                                </div>
+            
+                            </form>
+                        </article>
                     </div>
-                </form>
-            </article>
+                    <div class="col-md-4 total-section" style="margin-top: 100px;">
+                        <h3>Tổng Giá Tiền</h3>
+                        <form name="total" id="total-form">
+                            <div class="form-group row">
+                                <label class="col-sm-4 form-control-label text-xs-right"> Số tiền thu hộ: </label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control boxed" id="amount-collected" value="0" placeholder="Nhập số tiền">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 form-control-label text-xs-right"> Phí ship (%): </label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control boxed" id="shipping-fee" placeholder="Nhập phí ship">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 form-control-label text-xs-right"> Khoảng cách (km): </label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control boxed" id="distance" placeholder="Nhập khoảng cách">
+                                </div>
+                            </div>
+                    
+                            <div class="form-group row">
+                                <label class="col-sm-4 form-control-label text-xs-right"> Người trả phí: </label>
+                                <div class="col-sm-8">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="sender-pays" value="option1"> Người gửi
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="receiver-pays" value="option2"> Người nhận
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 form-control-label text-xs-right"> Tổng tiền: </label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control boxed" id="total-amount" placeholder="" readonly>
+                                </div>
+                            </div>
+                            <!-- ... (Any additional fields you may want to add) ... -->
+                    
+                            <div class="form-group row">
+                                <div class="col-sm-10 col-sm-offset-2">
+                                    <button type="button" class="btn btn-primary" > Xác nhận </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <div class="modal fade" id="modal-media">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Media Library</h4>
+                            <h4 class="modal-title">Thư viện ảnh</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
-                                <span class="sr-only">Close</span>
+                                <span class="sr-only">Đóng</span>
                             </button>
                         </div>
                         <div class="modal-body modal-tab-container">
@@ -445,24 +602,25 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
+            
             <!-- /.modal -->
             <div class="modal fade" id="confirm-modal">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title">
-                                <i class="fa fa-warning"></i> Alert
+                                <i class="fa fa-warning"></i> Lưu ý
                             </h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Are you sure want to do this?</p>
+                            <p>Bạn có muốn thực hiện hành động này?</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Có</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->
@@ -516,6 +674,107 @@
             };
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Lấy dữ liệu tỉnh/thành phố từ API
+            axios.get('https://provinces.open-api.vn/api/?depth=2')
+                .then(function (response) {
+                    // Xử lý dữ liệu và cập nhật dropdown tỉnh/thành phố
+                    var provinceDropdown = document.getElementById('provinceDropdown');
+                    response.data.forEach(function (province) {
+                        var option = document.createElement('option');
+                        option.value = province.code;
+                        option.text = province.name;
+                        provinceDropdown.add(option);
+                    });
+                })
+                .catch(function (error) {
+                    console.error('Error fetching provinces:', error);
+                });
+
+            // Gán sự kiện onchange cho dropdown tỉnh/thành phố để cập nhật dropdown huyện/quận
+            var provinceDropdown = document.getElementById('provinceDropdown');
+            var districtDropdown = document.getElementById('districtDropdown');
+            var wardDropdown = document.getElementById('wardDropdown');
+
+            provinceDropdown.addEventListener('change', function () {
+                // Lấy dữ liệu huyện/quận từ API dựa vào tỉnh/thành phố đã chọn
+                axios.get(`https://provinces.open-api.vn/api/p/${provinceDropdown.value}?depth=2`)
+                    .then(function (response) {
+                        // Xử lý dữ liệu và cập nhật dropdown huyện/quận
+                        districtDropdown.innerHTML = '<option value="">Chọn huyện/quận</option>';
+                        response.data.districts.forEach(function (district) {
+                            var option = document.createElement('option');
+                            option.value = district.code;
+                            option.text = district.name;
+                            districtDropdown.add(option);
+                        });
+                    })
+                    .catch(function (error) {
+                        console.error('Error fetching districts:', error);
+                    });
+            });
+
+            // Gán sự kiện onchange cho dropdown huyện/quận để cập nhật dropdown xã/phường
+            districtDropdown.addEventListener('change', function () {
+                // Lấy dữ liệu xã/phường từ API dựa vào huyện/quận đã chọn
+                axios.get(`https://provinces.open-api.vn/api/d/${districtDropdown.value}?depth=2`)
+                    .then(function (response) {
+                        // Xử lý dữ liệu và cập nhật dropdown xã/phường
+                        wardDropdown.innerHTML = '<option value="">Chọn xã/phường</option>';
+                        response.data.wards.forEach(function (ward) {
+                            var option = document.createElement('option');
+                            option.value = ward.code;
+                            option.text = ward.name;
+                            wardDropdown.add(option);
+                        });
+                    })
+                    .catch(function (error) {
+                        console.error('Error fetching wards:', error);
+                    });
+            });
+        });
+    </script>
+<script>
+    // Hàm tính toán và cập nhật tổng tiền
+    function calculateTotal() {
+        // Lấy giá trị từ các ô input
+        var amountCollected = parseFloat($('#amount-collected').val()) || 0;
+        var shippingFeePercentage = parseFloat($('#shipping-fee').val()) || 0;
+        var distance = parseFloat($('#distance').val()) || 0;
+        var senderPays = $('#sender-pays').prop('checked');
+        var receiverPays = $('#receiver-pays').prop('checked');
+
+        // Tính toán tổng tiền
+        var totalAmount = amountCollected;
+
+        if (shippingFeePercentage > 0) {
+            totalAmount += (amountCollected * (shippingFeePercentage / 100));
+        }
+
+        if (distance > 0) {
+            // Thêm logic tính toán dựa trên khoảng cách
+            // Ví dụ: totalAmount += someCalculationBasedOnDistance;
+
+        }
+
+        if (senderPays) {
+            // Thêm logic nếu người gửi trả phí
+        }
+
+        if (receiverPays) {
+            // Thêm logic nếu người nhận trả phí
+        }
+
+        // Cập nhật giá trị của ô Tổng tiền
+        $('#total-amount').val(totalAmount.toFixed(2));
+    }
+
+    // Gọi hàm calculateTotal khi giá trị của các ô input thay đổi
+    $('#amount-collected, #shipping-fee, #distance, #sender-pays, #receiver-pays').on('input', function () {
+        calculateTotal();
+    });
+</script>
 </body>
 
 </html>
