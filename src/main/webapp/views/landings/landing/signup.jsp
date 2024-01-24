@@ -12,113 +12,9 @@
     <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">
-<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.html
-<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.jsp
-=======
-<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.html
->>>>>>> Stashed changes:src/main/webapp/views/landings/landing/signup.jsp
-      <a href="index.html"><img src="../assets/asset 0.png" alt=""></a>
-========
-        <a href="index.jsp"><img src="../assets/asset 0.png" alt=""></a>
->>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/signup.jsp
-<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.jsp
-=======
-========
-        <a href="index.jsp"><img src="../assets/asset 0.png" alt=""></a>
->>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/signup.jsp
->>>>>>> Stashed changes:src/main/webapp/views/landings/landing/signup.jsp
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Dịch vụ </button>
-      <div class="dropdown-content">
-        <a href="#">Giao hàng nhanh </a>
-        <a href="#">Kho bãi và xử lí hàng hoá</a>
 
-      </div>
-    </div>
-    <div class="dropdown">
-<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.html
-      <button class="dropbtn">Giới thiệu </button>
-      <div class="dropdown-content">
-        <a href="#">Về FedEx</a>
-        <a href="#">Tin tức</a>
-        <a href="#">Quan hệ với nhà đầu tư</a>
-        <a href="#">Liên hệ</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Hỗ trợ </button>
-      <div class="dropdown-content">
-        <a href="customer_support.html">Câu hỏi thường gặp</a>
-        <a href="customer_sp_detail.html">Hướng dẫn sử dụng</a>
-        <a href="term-of-use.html">Điều khoản sử dụng</a>
-        <a href="privacy-page.html">Chính sách bảo mật</a>
-        <a href="">Chính sách vận chuyển</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Thông tin</button>
-      <div class="dropdown-content">
-        <a href="">Tin tức</a>
-        <a href="">Bảng giá</a>
-        <a href="">Khuyến mãi</a>
-      </div>
-    </div>
+ <jsp:include page="header.jsp"/>
 
-    <div class="dropdown">
-      <button class="dropbtn">Đăng nhập/Đăng kí <i class="bi bi-person-circle"></i></button>
-      <div class="dropdown-content">
-        <a href="login.html">Đăng nhập</a>
-        <a href="signup.html">Đăng kí</a>
-      </div>
-    </div>
-    <div class="search-container">
-      <input type="search" placeholder="Mã vận chuyển" id="search-input">
-      <a href="order_search.html" id="search-icon">
-        <i class="bi bi-search"></i>
-      </a>
-========
-        <button class="dropbtn">Giới thiệu </button>
-        <div class="dropdown-content">
-            <a href="about.jsp">Về FedEx</a>
-            <a href="#">Quan hệ với nhà đầu tư</a>
-            <a href="#">Liên hệ</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">Hỗ trợ </button>
-        <div class="dropdown-content">
-            <a href="customer_support.jsp">Câu hỏi thường gặp</a>
-            <a href="customer_sp_detail.jsp">Hướng dẫn sử dụng</a>
-            <a href="term-of-use.html">Điều khoản sử dụng</a>
-            <a href="privacy-page.jsp">Chính sách bảo mật</a>
-            <a href="not_allowed_packet.jsp">Hàng hoá không nhận vận chuyển</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn">Thông tin</button>
-        <div class="dropdown-content">
-            <a href="price_list.jsp">Bảng giá</a>
-            <a href="">Khuyến mãi</a>
-        </div>
-    </div>
-
-    <div class="dropdown">
-        <button class="dropbtn">Đăng nhập/Đăng kí <i class="bi bi-person-circle"></i></button>
-        <div class="dropdown-content">
-            <a href="login.jsp">Đăng nhập</a>
-            <a href="signup.html">Đăng kí</a>
-        </div>
-    </div>
-    <div class="search-container">
-        <input type="search" placeholder="Mã vận chuyển" id="search-input">
-        <a href="order_search.jsp" id="search-icon">
-            <i class="bi bi-search"></i>
-        </a>
->>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/signup.jsp
-    </div>
   </div>
       <div class="login-register">
         <h1>Sign In</h1>
@@ -163,15 +59,8 @@
         <!-- Your social login buttons here -->
         <p>Đã có tài khoản <a href="login.jsp">Đăng nhập ngay</a></p>
     </div>
-      
-        <div class="Footer">
-        <span class="footercopyright">© FedEx 1995-2021</span>
-        <div class="innerFoot">
-            <a class="footerlink" href="">Site Map <span style="padding: 0 10px;">| </span></a>
-            <a class="footerlink" href="">Terms of Use <span style="padding: 0 10px;">| </span> </a>
-            <a class="footerlink" href="">Privacy & Security</a>
-        </div>
-    </div>
+
+    <jsp:include page="footer.jsp"/>
 
     <script src="index.js"></script>
 </body>

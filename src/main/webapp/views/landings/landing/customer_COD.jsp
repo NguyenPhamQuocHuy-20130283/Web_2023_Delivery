@@ -12,61 +12,9 @@
     <link rel="stylesheet" href="../css/faq.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="../assets/asset 0.png" alt=""></a>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Dịch vụ </button>
-            <div class="dropdown-content">
-                <a href="#">Giao hàng nhanh </a>
-                <a href="#">Giao hàng thường</a>
-                <a href="#">Giao hàng siêu tốc</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Giới thiệu </button>
-            <div class="dropdown-content">
-                <a href="about.jsp">Về FedEx</a>
-                <a href="#">Quan hệ với nhà đầu tư</a>
-                <a href="#">Liên hệ</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Hỗ trợ </button>
-            <div class="dropdown-content">
-                <a href="customer_support.html">Câu hỏi thường gặp</a>
-                <a href="customer_sp_detail.html">Hướng dẫn sử dụng</a>
-                <a href="term-of-use.html">Điều khoản sử dụng</a>
-                <a href="privacy-page.html">Chính sách bảo mật</a>
-                <a href="not_allowed_packet.html">Hàng hoá không nhận vận chuyển</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Thông tin</button>
-            <div class="dropdown-content">
-                <a href="price_list.html">Bảng giá</a>
-                <a href="">Khuyến mãi</a>
-            </div>
-        </div>
-    
-        <div class="dropdown">
-            <button class="dropbtn">Đăng nhập/Đăng kí <i class="bi bi-person-circle"></i></button>
-            <div class="dropdown-content">
-                <a href="login.html">Đăng nhập</a>
-                <a href="signup.html">Đăng kí</a>
-            </div>
-        </div>
-        <div class="search-container">
-            <input type="search" placeholder="Mã vận chuyển" id="search-input">
-            <a href="order_search.html" id="search-icon">
-                <i class="bi bi-search"></i>
-            </a>
-        </div>
-    </div>
-      <div class="mini_nav">
-        <span> <a href="" style="font-weight: 700;"> Trang chủ</a>  > <a href="">hỗ trợ khách hàng</a></span>
-      </div>
+
+    <jsp:include page="header.jsp"/>
+
       <div class="main">
         <div class="landing_support">
           <div class="tittle">
@@ -142,14 +90,8 @@
           </div>
         </div>
       </div>
-        <div class="Footer">
-        <span class="footercopyright">© FedEx 1995-2021</span>
-        <div class="innerFoot">
-            <a class="footerlink" href="">Site Map <span style="padding: 0 10px;">| </span></a>
-            <a class="footerlink" href="">Terms of Use <span style="padding: 0 10px;">| </span> </a>
-            <a class="footerlink" href="">Privacy & Security</a>
-        </div>
-    </div>
+
+        <jsp:include page="footer.jsp"/>
 
     <script src="index.js"></script>
 </body>
