@@ -53,24 +53,42 @@ public class AccountDAO {
 
         }
     }
+    public static void insertAccount( Account account) {
+        String insertQuery = "INSERT INTO account (accountName, password, fullName, address, email, phone, idRoleMember) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        try {
+            Connection conn = DBConnect.getConnection();
+            PreparedStatement ps = conn.prepareStatement(insertQuery);
+            ps.setString(1, account.getAccountName());
+            ps.setString(2, account.getPassword());
+            ps.setString(3, account.getFullName());
+            ps.setString(4, account.getAddress());
+            ps.setString(5, account.getEmail());
+            ps.setString(6, account.getPhone());
+            ps.setInt(7, account.getIdRoleMember());
+            ps.executeUpdate();
+        } catch (Exception e) {
 
-    //	public static void updateAccount(Customer account) {
-//		String pass = EnCode.toSHA1(account.getPass());
-//		String query = "update Account set [user] = ?, password =?,email=?,address=?,phoneNumber=? where uid =?;";
-//		try {
-//			Connection conn = DBContext.getConnection();
-//			PreparedStatement ps = conn.prepareStatement(query);
-//			ps.setString(1, account.getUser());
-//			ps.setString(2, pass);
-//			ps.setString(3, account.getEmail());
-//			ps.setString(4, account.getPhoneNumber());
-//			ps.setString(5, account.getAddress());
-//			ps.setInt(6, account.getId());
-//			ps.executeUpdate();
-//		} catch (Exception e) {
-//
-//		}
-//	}
+        }
+    }
+
+
+    	public static void updateAccount(Account account) {
+
+	String query = "update Account set user = ?, password =?,email=?,address=?,phoneNumber=? where uid =?;";
+		try {
+			Connection conn = DBConnect.getConnection();
+			PreparedStatement ps = conn.prepareStatement(query);
+			ps.setString(1, account.getAccountName());
+			ps.setString(2, account.getPassword());
+			ps.setString(3, account.getEmail());
+			ps.setString(4, account.getAddress());
+			ps.setString(5, account.getPhone());
+			ps.setInt(6, account.getId());
+		ps.executeUpdate();
+		} catch (Exception e) {
+
+		}
+	}
     public static void main(String[] args) {
         System.out.println(getListAccount());
     }
