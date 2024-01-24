@@ -15,10 +15,20 @@
   <div class="navbar">
     <div class="logo">
 <<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.html
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.jsp
+=======
+<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.html
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/signup.jsp
       <a href="index.html"><img src="../assets/asset 0.png" alt=""></a>
 ========
         <a href="index.jsp"><img src="../assets/asset 0.png" alt=""></a>
 >>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/signup.jsp
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/signup.jsp
+=======
+========
+        <a href="index.jsp"><img src="../assets/asset 0.png" alt=""></a>
+>>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/signup.jsp
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/signup.jsp
     </div>
     <div class="dropdown">
       <button class="dropbtn">Dịch vụ </button>

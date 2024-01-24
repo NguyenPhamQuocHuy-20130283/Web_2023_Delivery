@@ -27,11 +27,21 @@
         <button class="dropbtn">Giới thiệu </button>
         <div class="dropdown-content">
 <<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.jsp
+=======
+<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/price_list.jsp
             <a href="#">Về FedEx</a>
             <a href="#">Tin tức</a>
 ========
             <a href="about.jsp">Về FedEx</a>
 >>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.jsp
+=======
+========
+            <a href="about.jsp">Về FedEx</a>
+>>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/price_list.jsp
             <a href="#">Quan hệ với nhà đầu tư</a>
             <a href="#">Liên hệ</a>
         </div>
@@ -40,17 +50,32 @@
         <button class="dropbtn">Hỗ trợ </button>
         <div class="dropdown-content">
 <<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.jsp
+=======
+<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/price_list.jsp
             <a href="customer_support.html">Câu hỏi thường gặp</a>
             <a href="customer_sp_detail.html">Hướng dẫn sử dụng</a>
             <a href="">Điều khoản và điều kiện</a>
             <a href="">Chính sách bảo mật</a>
             <a href="">Chính sách vận chuyển</a>
 ========
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.jsp
+=======
+========
+>>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/price_list.jsp
             <a href="customer_support.jsp">Câu hỏi thường gặp</a>
             <a href="customer_sp_detail.jsp">Hướng dẫn sử dụng</a>
             <a href="term-of-use.html">Điều khoản sử dụng</a>
             <a href="privacy-page.html">Chính sách bảo mật</a>
             <a href="not_allowed_packet.jsp">Hàng hoá không nhận vận chuyển</a>
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.jsp
+=======
+<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+>>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
+========
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/price_list.jsp
 >>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
         </div>
     </div>
@@ -67,9 +92,18 @@
         <button class="dropbtn">Đăng nhập/Đăng kí <i class="bi bi-person-circle"></i></button>
         <div class="dropdown-content">
 <<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.jsp
             <a href="login.html">Đăng nhập</a>
             <a href="">Đăng kí</a>
 ========
+=======
+<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+            <a href="login.html">Đăng nhập</a>
+            <a href="">Đăng kí</a>
+========
+========
+>>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/price_list.jsp
             <a href="login.jsp">Đăng nhập</a>
             <a href="signup.html">Đăng kí</a>
 >>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
@@ -78,10 +112,20 @@
     <div class="search-container">
         <input type="search" placeholder="Mã vận chuyển" id="search-input">
 <<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.jsp
+=======
+<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.html
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/price_list.jsp
         <a href="" id="search-icon">
 ========
         <a href="order_search.jsp" id="search-icon">
 >>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/price_list.jsp
+=======
+========
+        <a href="order_search.jsp" id="search-icon">
+>>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/price_list.jsp
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/price_list.jsp
             <i class="bi bi-search"></i>
         </a>
     </div>

@@ -17,10 +17,20 @@
   <div class="navbar">
     <div class="logo">
 <<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/term-of-use.html
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/term-of-use.jsp
+=======
+<<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/term-of-use.html
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/term-of-use.jsp
       <a href="index.html"><img src="../assets/asset 0.png" alt=""></a>
 ========
         <a href="index.jsp"><img src="../assets/asset 0.png" alt=""></a>
 >>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/term-of-use.jsp
+<<<<<<< Updated upstream:src/main/webapp/views/web/landings/landing/term-of-use.jsp
+=======
+========
+        <a href="index.jsp"><img src="../assets/asset 0.png" alt=""></a>
+>>>>>>>> Stashed changes:src/main/webapp/views/web/landings/landing/term-of-use.jsp
+>>>>>>> Stashed changes:src/main/webapp/views/landings/landing/term-of-use.jsp
     </div>
     <div class="dropdown">
       <button class="dropbtn">Dịch vụ </button>
