@@ -43,7 +43,7 @@
     <div class="main-wrapper">
         <div class="app" id="app">
 
-            <jsp:include page="../header/header.jsp"/>
+            <jsp:include page="./header/header.jsp"/>
 
             <aside class="sidebar">
                 <div class="sidebar-container">
@@ -137,7 +137,7 @@
                     </nav>
                 </div>
 
-                <jsp:include page="..footer/footer.jsp"/>
+                <jsp:include page="./footer/footer.jsp"/>
 
             </aside>
 
