@@ -10,7 +10,7 @@ import model.Account;
 public class AccountDAO {
     public static List<Account> getListAccount() {
         ArrayList<Account> list = new ArrayList<>();
-        String query = "select * from Account where isAdmin = 0 ";
+        String query = "select * from Account  ";
         try {
             Connection conn = DBConnect.getConnection();
             PreparedStatement ps = conn.prepareStatement(query);
@@ -54,7 +54,7 @@ public class AccountDAO {
         }
     }
     public static void insertAccount( Account account) {
-        String insertQuery = "INSERT INTO account (accountName, password, fullName, address, email, phone, idRoleMember) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String insertQuery = "INSERT INTO Account (accountName, password, fullName, address, email, phone, idRoleMember) VALUES (?, ?, ?, ?, ?, ?, ?)";
         try {
             Connection conn = DBConnect.getConnection();
             PreparedStatement ps = conn.prepareStatement(insertQuery);
@@ -74,7 +74,7 @@ public class AccountDAO {
 
     	public static void updateAccount(Account account) {
 
-	String query = "update Account set user = ?, password =?,email=?,address=?,phoneNumber=? where uid =?;";
+	String query = "update Account set accountName = ?, password =?,email=?,address=?,phoneNumber=?,idRoleMember=? where uid =?;";
 		try {
 			Connection conn = DBConnect.getConnection();
 			PreparedStatement ps = conn.prepareStatement(query);
@@ -83,12 +83,14 @@ public class AccountDAO {
 			ps.setString(3, account.getEmail());
 			ps.setString(4, account.getAddress());
 			ps.setString(5, account.getPhone());
-			ps.setInt(6, account.getId());
+            ps.setInt(6, account.getIdRoleMember());
+			ps.setInt(7, account.getId());
 		ps.executeUpdate();
 		} catch (Exception e) {
 
 		}
 	}
+
     public static void main(String[] args) {
         System.out.println(getListAccount());
     }

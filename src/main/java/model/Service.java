@@ -17,6 +17,12 @@ public class Service {
         this.updateAt = updateAt;
     }
 
+    public Service(int sid, String name, int price) {
+        this.sid = sid;
+        this.name = name;
+        this.price = price;
+    }
+
     public Service() {
     }
 
