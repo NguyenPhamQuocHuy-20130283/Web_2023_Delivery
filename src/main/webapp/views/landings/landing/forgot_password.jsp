@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 
 <body>
 
-<jsp:include page="header.jsp"/>
+<jsp:include page="../header/header.jsp"/>
 
 <div class="forgot_password" >
     <h1>Forgot password?</h1>
@@ -23,7 +24,7 @@
     <a href="">Back to Sign in</a>
 </div>
 
-<jsp:include page="footer.jsp"/>
+<jsp:include page="../footer/footer.jsp"/>
 
 </body>
 

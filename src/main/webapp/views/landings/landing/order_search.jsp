@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
 
-<jsp:include page="header.jsp"/>
+<jsp:include page="../header/header.jsp"/>
 
 <div class="main">
     <div class="order-info">
@@ -152,7 +153,7 @@
 </div>
         <!-- end of order search -->
 
-<jsp:include page="footer.jsp"/>
+<jsp:include page="../footer/footer.jsp"/>
 
 </body>
 

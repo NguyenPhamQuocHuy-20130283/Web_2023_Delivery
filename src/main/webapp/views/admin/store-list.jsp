@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -152,115 +153,9 @@
 <body>
     <div class="main-wrapper">
         <div class="app" id="app">
-            <header class="header">
-                <div class="header-block header-block-collapse d-lg-none d-xl-none">
-                    <button class="collapse-btn" id="sidebar-collapse-btn">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                </div>
-                <div class="header-block header-block-search">
-                    <form role="search">
-                        <div class="input-container">
-                            <i class="fa fa-search"></i>
-                            <input type="search" placeholder="Tìm...">
-                            <div class="underline"></div>
-                        </div>
-                    </form>
-                </div>
-                <div class="header-block header-block-nav">
-                    <ul class="nav-profile">
-                        <li class="notifications new">
-                            <a href="" data-toggle="dropdown">
-                                <i class="fa fa-bell-o"></i>
-                                <sup>
-                                    <span class="counter">8</span>
-                                </sup>
-                            </a>
-                            <div class="dropdown-menu notifications-dropdown-menu">
-                                <ul class="notifications-container">
-                                    <li>
-                                        <a href="" class="notification-item">
-                                            <div class="img-col">
-                                                <div class="img" style="background-image: url('assets/faces/3.jpg')">
-                                                </div>
-                                            </div>
-                                            <div class="body-col">
-                                                <p>
-                                                    <span class="accent">User2</span> Thêm sản phẩm:
-                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="notification-item">
-                                            <div class="img-col">
-                                                <div class="img" style="background-image: url('assets/faces/5.jpg')">
-                                                </div>
-                                            </div>
-                                            <div class="body-col">
-                                                <p>
-                                                    <span class="accent">User1</span> Sửa thông tin sản phẩm:
-                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="notification-item">
-                                            <div class="img-col">
-                                                <div class="img" style="background-image: url('assets/faces/8.jpg')">
-                                                </div>
-                                            </div>
-                                            <div class="body-col">
-                                                <p>
-                                                    <span class="accent">User3</span> Xoá sản phẩm:
-                                                    <span class="accent">Áo vippro123 được làm từ tinh bột</span>.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <footer>
-                                    <ul>
-                                        <li>
-                                            <a href=""> Xem tất cả </a>
-                                        </li>
-                                    </ul>
-                                </footer>
-                            </div>
-                        </li>
-                        <li class="profile dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                aria-haspopup="true" aria-expanded="false">
-                                <div class="img"
-                                    style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')">
-                                </div>
-                                <span class="name"> Admin </span>
-                            </a>
-                            <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">
-<<<<<<<< Updated upstream:src/main/webapp/views/web/admin/comments-list.html
-                                <a class="dropdown-item" href="#">
-========
-                                <a class="dropdown-item" href="account-info.jsp">
->>>>>>>> Stashed changes:src/main/webapp/views/web/admin/store-list.jsp
-                                    <i class="fa fa-user icon"></i> Tài khoản </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fa fa-bell icon"></i> Thông báo </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fa fa-gear icon"></i> Cài đặt </a>
-                                <div class="dropdown-divider"></div>
-<<<<<<<< Updated upstream:src/main/webapp/views/web/admin/comments-list.html
-                                <a class="dropdown-item" href="login.html">
-========
-                                <a class="dropdown-item" href="../landings/landing/login.jsp">
->>>>>>>> Stashed changes:src/main/webapp/views/web/admin/store-list.jsp
-                                    <i class="fa fa-power-off icon"></i> Đăng xuất </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </header>
+
+            <jsp:include page="../header/header.jsp"/>
+
             <aside class="sidebar">
                 <div class="sidebar-container">
                     <div class="sidebar-header">
@@ -375,87 +270,9 @@
                         </ul>
                     </nav>
                 </div>
-                <footer class="sidebar-footer">
-                    <ul class="sidebar-menu metismenu" id="customize-menu">
-                        <li>
-                            <ul>
-                                <li class="customize">
-                                    <div class="customize-item">
-                                        <div class="row customize-header">
-                                            <div class="col-4"> </div>
-                                            <div class="col-4">
-                                                <label class="title">Cố dịnh</label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label class="title">Linh hoạt</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label class="title">Thanh công cụ:</label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>
-                                                    <input class="radio" type="radio" name="sidebarPosition"
-                                                        value="sidebar-fixed">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>
-                                                    <input class="radio" type="radio" name="sidebarPosition" value="">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label class="title">Tiêu đề:</label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>
-                                                    <input class="radio" type="radio" name="headerPosition"
-                                                        value="header-fixed">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>
-                                                    <input class="radio" type="radio" name="headerPosition" value="">
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="customize-item">
-                                        <ul class="customize-colors">
-                                            <li>
-                                                <span class="color-item color-red" data-theme="red"></span>
-                                            </li>
-                                            <li>
-                                                <span class="color-item color-orange" data-theme="orange"></span>
-                                            </li>
-                                            <li>
-                                                <span class="color-item color-green active" data-theme=""></span>
-                                            </li>
-                                            <li>
-                                                <span class="color-item color-seagreen" data-theme="seagreen"></span>
-                                            </li>
-                                            <li>
-                                                <span class="color-item color-blue" data-theme="blue"></span>
-                                            </li>
-                                            <li>
-                                                <span class="color-item color-purple" data-theme="purple"></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                            <a href="">
-                                <i class="fa fa-cog"></i> Sửa đổi giao diện </a>
-                        </li>
-                    </ul>
-                </footer>
+
+                <jsp:include page="..footer/footer.jsp"/>
+
             </aside>
             <div class="sidebar-overlay" id="sidebar-overlay"></div>
             <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>

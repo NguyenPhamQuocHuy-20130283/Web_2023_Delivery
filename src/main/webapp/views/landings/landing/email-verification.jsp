@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 
 <body>
 
-<jsp:include page="header.jsp"/>
+<jsp:include page="../header/header.jsp"/>
 
 <div class="email_verification" >
     <h1>Verify your email</h1>
@@ -21,7 +22,7 @@
     </p>
 </div>
 
-<jsp:include page="footer.jsp"/>
+<jsp:include page="../footer/footer.jsp"/>
 
 </body>
 
