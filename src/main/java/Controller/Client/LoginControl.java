@@ -1,4 +1,4 @@
-package Controller;
+package Controller.Client;
 
 import Connect.DB;
 import DAO.Client.AuthDAO;

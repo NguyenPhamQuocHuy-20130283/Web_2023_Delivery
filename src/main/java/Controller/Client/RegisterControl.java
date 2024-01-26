@@ -1,4 +1,4 @@
-package Controller;
+package Controller.Client;
 
 import DAO.Client.AuthDAO;
 import model.Account;
@@ -43,7 +43,7 @@ public class RegisterControl extends HttpServlet {
         } else {
             Account a = new Account(user, passWord, name, address, email, phone);
             request.setAttribute("cus", a);
-            request.getRequestDispatcher("/VerifyEmailControl").forward(request, response);
+            request.getRequestDispatcher("/java/Controller/Client/VerifyEmailControl").forward(request, response);
         }
     }
 

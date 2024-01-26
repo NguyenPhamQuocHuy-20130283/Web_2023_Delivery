@@ -1,4 +1,4 @@
-package Controller;
+package Controller.Client;
 
 
 import javax.servlet.annotation.WebServlet;
