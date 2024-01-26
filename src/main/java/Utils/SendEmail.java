@@ -43,9 +43,13 @@ public class SendEmail {
         // khai báo
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.port", "465");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.starttls.required", "true");
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
+        props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+
 
         // Tao auth
         Authenticator auth = new Authenticator() {
@@ -80,7 +84,7 @@ public class SendEmail {
     }
 
     public static void main(String[] args) {
-//		sendMailFogetPassWord("leminhlongit@gmail.com", "KHASasd");
+		sendMailFogetPassWord("chung41901@gmail.com", "KHASasd");
 
     }
 }
