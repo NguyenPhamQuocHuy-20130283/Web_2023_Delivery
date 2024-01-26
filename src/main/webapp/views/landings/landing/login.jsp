@@ -34,7 +34,8 @@
             <span>Hoặc</span>
         </div>
         <div class="social-login">
-            <a href="#" class="btn btn-google">
+            <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/Web_2023_Delivery/login-google&response_type=code
+    &client_id=285105457618-1r7iskqi4ucdr075ai707mn1qqjpon22.apps.googleusercontent.com&approval_prompt=force" class="btn btn-google">
                 <i class="bi bi-google"></i> Đăng Nhập bằng Google
             </a>
             <a href="#" class="btn btn-facebook">
