@@ -167,4 +167,8 @@ public class Order {
     public void setCustomer_id(String customer_id) {
         this.customer_id = customer_id;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
