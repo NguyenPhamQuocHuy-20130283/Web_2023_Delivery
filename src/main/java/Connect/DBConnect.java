@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class DBConnect {
     private static final String serverName = "localhost";
-    private static final String dbName = "app_food";
+    private static final String dbName = "delivery_web";
     private static final String portNumber = "3306";
     private static final String instance = "";// LEAVE THIS ONE EMPTY IF YOUR SQL IS A SINGLE INSTANCE
     private static final String userID = "root";
