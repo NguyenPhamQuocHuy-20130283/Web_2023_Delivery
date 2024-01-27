@@ -26,7 +26,7 @@ public class LoginControl extends HttpServlet {
         String pid = request.getParameter("pid");
 
         HttpSession session = request.getSession();
-        Account account = AuthDAO.login(userName, passWord);
+        Account account = AuthDAO.loginNoJdbi(userName, passWord);
         String ipAddress = request.getRemoteAddr();
         Log log = new Log(Log.INFO, ipAddress, -1, this.name, "", 0);
         if (account == null) {
@@ -34,19 +34,17 @@ public class LoginControl extends HttpServlet {
             log.setContent("LOGIN FALSE: USER - " + userName);
             log.setLevel(Log.WARNING);
             request.setAttribute("error", "Tài khoản hoặc mật khẩu không hợp lệ ");
+            System.out.println("Tài khoản hoặc mật khẩu không hợp lệ ");
             request.getRequestDispatcher("/views/landings/landing/login.jsp").forward(request, response);
         } else {
-            session.setAttribute("acc", account);
 
             session.setMaxInactiveInterval(1800);
             log.setSrc(this.name + " LOGIN");
             log.setContent("LOGIN SUCCESS: USER - " + userName);
-            request.setAttribute("account", account);
-            if(account.getIdRoleMember() == 1){
-                request.getRequestDispatcher("/AdminHome").forward(request, response);
-            }else {
-               response.sendRedirect("IndexControl");
-            }
+
+            int id = account.getIdRoleMember();
+            System.out.println(id);
+            response.sendRedirect("AdminHome");
         }
 
     }

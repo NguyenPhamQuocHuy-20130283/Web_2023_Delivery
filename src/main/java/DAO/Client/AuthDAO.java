@@ -19,7 +19,7 @@ public class AuthDAO {
 
         try {
             return (Account) me.withHandle(handle -> handle.createQuery(
-                            "select idCustomer,userName,password,Name,Address,email,NumberPhone,id_role_member  from customers where Email = ? and password  = ? ")
+                            "select idCustomer,userName,password,Name,Address,email,NumberPhone,id_role_member  from customers where email = ? and password  = ? ")
                     .bind(0, email).bind(1, password).mapToBean(Account.class).findFirst().orElse(null));
         } catch (Exception e) {
             e.printStackTrace();
@@ -48,11 +48,12 @@ public class AuthDAO {
                 .bind(3, email).bind(4, address).bind(5, NumberPhone).execute());
     }
 
-    public static Account checkAccountExistByid(String uid) {
-
-        String query = "select idCustomer,userName,password,Name,Address,Email,NumberPhone,id_role_member from customer where idCustomer = ?";
+    public static Account loginNoJdbi(String email, String pass) {
+        pass = EnCode.toSHA1(pass);
+        String query = "select idCustomer,userName,password,Name,Address,Email,NumberPhone,id_role_member from customers where email = ? and password = ? limit 1 ";
         try (Connection conn = DBConnect.getConnection(); PreparedStatement ps = conn.prepareStatement(query);) {
-            ps.setString(1, uid);
+            ps.setString(1, email);
+            ps.setString(2, pass);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     return new Account(rs.getInt("idCustomer"), rs.getString("userName"), rs.getString("password"),
@@ -194,7 +195,7 @@ public class AuthDAO {
     public static void main(String[] args) {
 //		System.out.println(checkAccountExist("leminhl1ong@gmail.com", "leminhlongi1t@gmail.com"));
 //		signinGoogle("12312", "Hao", "123@gmail.com", "341341");
-        System.out.println(login("chung41901@gmail.com", "090179Huy$"));
+        System.out.println(loginNoJdbi("chung41901@gmail.com", "090179Huy$"));
     }
 
 }

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/AdminHome")
 public class AdminHomeControl extends HttpServlet {
-    private static final long serialVersionUID = 2L;
+    private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -22,9 +22,6 @@ public class AdminHomeControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         if (isDispatched == null || !isDispatched) {
             request.getRequestDispatcher("/views/admin/index.jsp").forward(request, response);
-        }
-        else {
-            request.getRequestDispatcher("/views/landings/lading/index.jsp").forward(request, response);
         }
     }
 

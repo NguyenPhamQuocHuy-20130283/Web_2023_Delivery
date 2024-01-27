@@ -63,16 +63,7 @@ public class Account {
         this.email = email;
         this.phone = phone;
     }
-    public Account(String accountName, String password, String fullName, String address, String email, String phone, int idRoleMember) {
 
-        this.accountName = accountName;
-        this.password = password;
-        this.fullName = fullName;
-        this.address = address;
-        this.email = email;
-        this.phone = phone;
-        this.idRoleMember = idRoleMember;
-    }
     public Account(int anInt, String string, String string1, String string2, int anInt1, String string3, String string4) {
     }
 
