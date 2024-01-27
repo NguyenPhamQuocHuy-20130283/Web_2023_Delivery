@@ -11,10 +11,10 @@ public class Service {
 
     public Service(int sid, String name, int price, boolean isActive, Date updateAt) {
         this.sid = sid;
-        this.name = name;
-        this.price = price;
-        this.isActive = isActive;
-        this.updateAt = updateAt;
+        this.name = this.name;
+        this.price = this.price;
+        this.isActive = this.isActive;
+        this.updateAt = this.updateAt;
     }
 
     public Service(int sid, String name, int price) {
