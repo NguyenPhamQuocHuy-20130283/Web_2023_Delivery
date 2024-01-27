@@ -19,34 +19,34 @@
   </div>
       <div class="login-register">
         <h1>Sign In</h1>
-        <form action="#" method="post">
+        <form action="/Register" method="post">
             <div class="form-group">
-                <label for="username">Tài khoản:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="user">Tài khoản:</label>
+                <input type="text" id="user" name="user" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Tên người dùng:</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="password">Mật khẩu:</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <label for="confirm-password">Xác nhận mật khẩu:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <label for="repassword">Xác nhận mật khẩu:</label>
+                <input type="password" id="repassword" name="repassword" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="phone">Số điện thoại:</label>
-                <input type="text" id="phone" name="phone" required>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
             </div>
             <div class="form-group">
-                <label for="purpose">Mục đích sử dụng:</label>
-                <select id="purpose" name="purpose" required>
-                    <option value="option1">Cho cá nhân</option>
-                    <option value="option2">Cho doanh nghiệp</option>
-
-                </select>
+                <label for="phone">Số điện thoại:</label>
+                <input type="text" id="phone" name="phone" required>
             </div>
             <div class="form-group">
               <div class="confirm-text" style="padding: 5px 20%;">

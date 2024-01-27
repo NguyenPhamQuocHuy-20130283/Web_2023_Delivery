@@ -4,6 +4,7 @@ import DAO.Client.AuthDAO;
 import model.Account;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
-
+@WebServlet("/SubmitEmail")
 public class SubmitEmailControl extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -21,6 +22,7 @@ public class SubmitEmailControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
         Account customer = (Account) session.getAttribute("custemp");
+        System.out.println("Submit email control"+customer.getPassword());
         String codeverify = request.getParameter("codeverify");
         boolean checkCustommerExits = AuthDAO.checkAccountExist(customer.getAccountName(), customer.getEmail());
         LocalDateTime lastTime = (LocalDateTime) session.getAttribute("timeNow");
@@ -28,14 +30,19 @@ public class SubmitEmailControl extends HttpServlet {
         Duration duration = Duration.between(lastTime, currentTime);
         if (duration.getSeconds() > 300) {
             request.setAttribute("timeUp", "Hết thời gian xác thực email!");
-            request.getRequestDispatcher("/webapp/views/landings/landing/email-verification.jsp").forward(request, response);
+            request.getRequestDispatcher("/views/landings/landing/email-verification.jsp").forward(request, response);
         } else if (!codeverify.equals(session.getAttribute("newVerify"))) {
-            request.setAttribute("error", "Mã xác thực không chính xác!");
-            request.getRequestDispatcher("/webapp/views/landings/landing/email-verification.jsp").forward(request, response);
-        } else if (checkCustommerExits == false) {
+            session.setAttribute("error", "Mã xác thực không chính xác!");
+            request.getRequestDispatcher("/views/landings/landing/email-verification.jsp").forward(request, response);
+        } else if (!checkCustommerExits) {
             AuthDAO.signup(customer.getAccountName(), customer.getPassword(), customer.getFullName(), customer.getEmail(),
-                    customer.getEmail(), customer.getPhone());
-            request.getRequestDispatcher("/webapp/views/landings/landing/login.jsp").forward(request, response);
+                    customer.getAddress(), customer.getPhone());
+            request.getRequestDispatcher("/views/landings/landing/login.jsp").forward(request, response);
         }
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        doGet(request, response);
     }
 }

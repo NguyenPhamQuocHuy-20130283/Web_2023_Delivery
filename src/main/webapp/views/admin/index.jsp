@@ -1,4 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<% if(session.getAttribute("account")==null){
+    response.sendRedirect(request.getContextPath()+"/login");
+} %>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -10,18 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="./css/vendor.css">
-    <script>
-        var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
-            {};
-        var themeName = themeSettings.themeName || '';
-        if (themeName) {
-            document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
-        }
-        else {
-            document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
-        }
-    </script>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/admin/css/vendor.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/admin/css/app.css">
 </head>
 
 <body>
@@ -353,9 +349,9 @@
         ga('create', 'UA-80463319-4', 'auto');
         ga('send', 'pageview');
     </script>
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/vendor.js"></script>
-    <script src="js/app.js"></script>
+    <script src="<%= request.getContextPath() %>/views/admin/js/jquery-3.6.1.min.js"></script>
+    <script src="<%= request.getContextPath() %>/views/admin/js/vendor.js"></script>
+    <script src="<%= request.getContextPath() %>/views/admin/js/app.js"></script>
     <script>
         function getRandomDate() {
             const maxDate = Date.now();

@@ -1,6 +1,6 @@
 package Controller.Client;
 
-import Util.SendEmail;
+import utils.SendEmail;
 import model.Account;
 
 import javax.servlet.ServletException;
@@ -19,6 +19,7 @@ public class VerifyEmailControl extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         Account customer = (Account) request.getAttribute("cus");
+        System.out.println("Verify control"+customer.getPassword());
         String email = request.getParameter("email");
         System.out.println(email);
         request.setAttribute("email", customer.getEmail());
@@ -28,7 +29,7 @@ public class VerifyEmailControl extends HttpServlet {
         session.setAttribute("newVerify", newVerify);
         session.setAttribute("custemp", customer);
         session.setAttribute("timeNow", LocalDateTime.now());
-        request.getRequestDispatcher("/webapp/views/landings/landing/email-verification.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/landings/landing/email-verification.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

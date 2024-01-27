@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập / Đăng Ký</title>
-    <link rel="stylesheet" href="../css/login.css"> <!-- Sử dụng tệp CSS riêng cho trang đăng nhập -->
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/landings/css/login.css"> <!-- Sử dụng tệp CSS riêng cho trang đăng nhập -->
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 
     <div class="login-register">
         <h1>Đăng Nhập hoặc Đăng Ký</h1>
-        <form action="/admin/index.html" method="post">
+        <form action="/Login" method="post">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -26,7 +26,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <button type="submit" onclick="performLogin()">Đăng Nhập</button>
+                <button type="submit" >Đăng Nhập</button>
             </div>
         </form>
 

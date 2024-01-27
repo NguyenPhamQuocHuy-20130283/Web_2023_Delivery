@@ -1,7 +1,8 @@
-package Util;
+package utils;
+
+import org.apache.commons.codec.binary.Base64;
 
 import java.security.MessageDigest;
-import java.util.Base64;
 
 public class EnCode {
     public static String toSHA1(String st) {
@@ -13,7 +14,7 @@ public class EnCode {
 
         try {
             byte[] dataBytes = st.getBytes("UTF-8");
-            MessageDigest md = MessageDigest.getInstance("toSHA1");
+            MessageDigest md = MessageDigest.getInstance("SHA-1");
             result = Base64.encodeBase64String(md.digest(dataBytes));
         } catch (Exception e){
             e.printStackTrace();

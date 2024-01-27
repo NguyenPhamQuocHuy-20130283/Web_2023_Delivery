@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
     <div class="navbar">
         <div class="logo">
-          <a href="index.html"><img src="../assets/asset 0.png" alt=""></a>
+          <a href="IndexControl"><img src="../assets/asset 0.png" alt=""></a>
         </div>
         <div class="dropdown">
           <button class="dropbtn">Dịch vụ </button>
@@ -49,8 +50,8 @@
         <div class="dropdown">
           <button class="dropbtn">Đăng nhập/Đăng kí <i class="bi bi-person-circle"></i></button>
           <div class="dropdown-content">
-            <a href="login.html">Đăng nhập</a>
-            <a href="signup.html">Đăng kí</a>
+            <a href="/views/landings/landing/login.jsp">Đăng nhập</a>
+            <a href="/views/landings/landing/signup.jsp">Đăng kí</a>
           </div>
         </div>
         <div class="search-container">

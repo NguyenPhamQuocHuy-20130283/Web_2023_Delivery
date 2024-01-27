@@ -1,7 +1,7 @@
 package DAO.Client;
 
 import Connect.DBConnect;
-import Util.EnCode;
+import utils.EnCode;
 import model.Account;
 import org.jdbi.v3.core.Jdbi;
 import java.sql.Connection;
@@ -13,14 +13,14 @@ public class AuthDAO {
         super();
     }
 
-    public static Account login(String username, String pass) {
+    public static Account login(String email, String pass) {
         Jdbi me = DBConnect.me();
-        String passworken = EnCode.toSHA1(pass);
+        String password = EnCode.toSHA1(pass);
 
         try {
             return (Account) me.withHandle(handle -> handle.createQuery(
-                            "select id,accountName,password,fullName,address,email,phone,idRoleMember  from accounts where accountName = ? and password  = ? ")
-                    .bind(0, username).bind(1, passworken).mapToBean(Account.class).findFirst().orElse(null));
+                            "select idCustomer,userName,password,Name,Address,email,NumberPhone,id_role_member  from customers where Email = ? and password  = ? ")
+                    .bind(0, email).bind(1, password).mapToBean(Account.class).findFirst().orElse(null));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -194,7 +194,7 @@ public class AuthDAO {
     public static void main(String[] args) {
 //		System.out.println(checkAccountExist("leminhl1ong@gmail.com", "leminhlongi1t@gmail.com"));
 //		signinGoogle("12312", "Hao", "123@gmail.com", "341341");
-        System.out.println(login("locancuc", "L0374781483Lll@"));
+        System.out.println(login("chung41901@gmail.com", "090179Huy$"));
     }
 
 }

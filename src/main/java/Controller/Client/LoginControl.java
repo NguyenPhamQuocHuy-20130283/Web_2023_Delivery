@@ -34,20 +34,21 @@ public class LoginControl extends HttpServlet {
             log.setContent("LOGIN FALSE: USER - " + userName);
             log.setLevel(Log.WARNING);
             request.setAttribute("error", "Tài khoản hoặc mật khẩu không hợp lệ ");
-            request.getRequestDispatcher("/webapp/views/landings/landing/login.jsp").forward(request, response);
+            request.getRequestDispatcher("/views/landings/landing/login.jsp").forward(request, response);
         } else {
             session.setAttribute("acc", account);
+
             session.setMaxInactiveInterval(1800);
             log.setSrc(this.name + " LOGIN");
             log.setContent("LOGIN SUCCESS: USER - " + userName);
-
-            if (pid == null) {
-                request.getRequestDispatcher("IndexControl").forward(request, response);
-            } else {
-                response.sendRedirect("DetailControl?pid=" + pid);
+            request.setAttribute("account", account);
+            if(account.getIdRoleMember() == 1){
+                request.getRequestDispatcher("/AdminHome").forward(request, response);
+            }else {
+               response.sendRedirect("IndexControl");
             }
         }
-        DB.me().insert(log);
+
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
