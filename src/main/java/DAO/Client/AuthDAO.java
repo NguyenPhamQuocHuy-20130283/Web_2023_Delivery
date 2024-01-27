@@ -195,7 +195,7 @@ public class AuthDAO {
     public static void main(String[] args) {
 //		System.out.println(checkAccountExist("leminhl1ong@gmail.com", "leminhlongi1t@gmail.com"));
 //		signinGoogle("12312", "Hao", "123@gmail.com", "341341");
-        System.out.println(loginNoJdbi("chung41901@gmail.com", "090179Huy$"));
+        System.out.println(login("chung41901@gmail.com", "090179Huy$"));
     }
 
 }

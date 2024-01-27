@@ -12,17 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/AdminHome")
-public class AdminHomeControl extends HttpServlet {
+public class AdminHomeControl extends HttpServlet  {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Boolean isDispatched = (Boolean) request.getAttribute("isDispatched");
-        request.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html;charset=UTF-8");
-        if (isDispatched == null || !isDispatched) {
-            request.getRequestDispatcher("/views/admin/index.jsp").forward(request, response);
-        }
+        request.getRequestDispatcher("/views/admin/index.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

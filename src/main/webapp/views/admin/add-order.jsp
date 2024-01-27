@@ -1,3 +1,5 @@
+<%@ page import="model.Category" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -12,31 +14,15 @@
     <!-- Place favicon.ico in the root directory -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <link rel="stylesheet" href="css/vendor.css" />
-    <link rel="stylesheet" href="css/orders-list.css" />
+    <link rel="stylesheet" href="/views/admin/css/vendor.css" />
+    <link rel="stylesheet" href="/views/admin/css/orders-list.css" />
     <style>
         .input-group-btn {
             display: flex;
         }
     </style>
     <!-- Theme initialization -->
-    <script>
-        var themeSettings = localStorage.getItem("themeSettings")
-            ? JSON.parse(localStorage.getItem("themeSettings"))
-            : {};
-        var themeName = themeSettings.themeName || "";
-        if (themeName) {
-            document.write(
-                '<link rel="stylesheet" id="theme-style" href="css/app-' +
-                themeName +
-                '.css">'
-            );
-        } else {
-            document.write(
-                '<link rel="stylesheet" id="theme-style" href="css/app.css">'
-            );
-        }
-    </script>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/views/admin/css/app.css">
 </head>
 
 <body>
@@ -45,101 +31,7 @@
 
             <jsp:include page="./header/header.jsp"/>
 
-            <aside class="sidebar">
-                <div class="sidebar-container">
-                    <div class="sidebar-header">
-                        <div class="brand">
-                            <div class="logo">
-                                <span class="l l1"></span>
-                                <span class="l l2"></span>
-                                <span class="l l3"></span>
-                                <span class="l l4"></span>
-                                <span class="l l5"></span>
-                            </div> Quản Lý
-                        </div>
-                    </div>
-                    <nav class="menu">
-                        <ul class="sidebar-menu metismenu" id="sidebar-menu">
-                            <li class="active">
-                                <a href="index.html">
-                                    <i class="fa fa-home"></i> Tổng quan </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-th-large"></i> Quản Lý Đối Tượng
-                                    <i class="fa arrow"></i>
-                                </a>
-                                <ul class="sidebar-nav">
-                                    <li>
-                                        <a href="#"> Dịch vụ<i class="fa arrow"></i></a>
-                                        <ul class="sidebar-nav">
-                                            <li>
-                                                <a href="./items-list.html"> Danh sách dịch vụ </a>
-                                            </li>
 
-                                            <li>
-                                                <a href="add-item.jsp"> Thêm dịch vụ </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <a href="#"> Đơn hàng <i class="fa arrow"></i></a>
-                                        <ul class="sidebar-nav">
-                                            <li>
-                                                <a href="./orders-list.html"> Danh sách đơn hàng </a>
-                                            </li>
-                                            <li>
-                                                <a href="./add-order.html"> Thêm đơn hàng </a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#"> Người dùng <i class="fa arrow"></i></a>
-                                        <ul class="sidebar-nav">
-                                            <li>
-                                                <a href="./users-list.html"> Danh sách người dùng </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="./add-users.html"> Thêm người dùng</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">  Cửa hàng <i class="fa arrow"></i></a>
-                                        <ul class="sidebar-nav">
-                                            <li>
-                                                <a href="./store-list.html"> Danh sách cửa hàng </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="./add-store.html"> Thêm cửa hàng</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-area-chart"></i> Thống kê
-                                    <i class="fa arrow"></i>
-                                </a>
-                                <ul class="sidebar-nav">
-
-                                    <li>
-                                        <a href="static-tables.html"> Bảng </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <jsp:include page="./footer/footer.jsp"/>
-
-            </aside>
 
             <div class="sidebar-overlay" id="sidebar-overlay"></div>
             <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
@@ -153,12 +45,13 @@
                                     <span class="sparkline bar" data-type="bar"></span>
                                 </h3>
                             </div>
-                            <form name="item">
+                            <form name="item" action="/AddPackage" method="post">
+                                <input type="hidden" name="action" value="addPackage">
                                 <div class="card card-block">
                                     <div class="form-group row">
                                         <label class="col-sm-2 form-control-label text-xs-right"> Tên người gửi: </label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control boxed" placeholder="Nhập tên">
+                                            <input type="text" id="nameSender" name="nameSender" class="form-control boxed" placeholder="Nhập tên">
                                         </div>
                                     </div>
             
@@ -166,9 +59,16 @@
                                         <label class="col-sm-2 form-control-label text-xs-right"> Loại giao hàng: </label>
                                         <div class="col-sm-10">
                                             <select class="form-control boxed" style="width: 200px">
-                                                <option value="option1">Giao hàng nhanh</option>
-                                                <option value="option2">Giao hàng siêu tốc</option>
-                                                <option value="option3">Giao hàng ngoại địa</option>
+                                                <%
+                                                    // Get the list of categories from the session
+                                                    List<Category> listCategory = (List<Category>) session.getAttribute("listCategory");
+                                                    // Iterate over the list and create an option for each category
+                                                    for (Category category : listCategory) {
+                                                %>
+                                                <option value="<%= category.getidCategorie() %>"><%= category.getnameCategorie() %></option>
+                                                <%
+                                                    }
+                                                %>
                                                 <!-- Thêm các tùy chọn khác ở đây -->
                                             </select>
                                         </div>
@@ -176,34 +76,34 @@
                                     <div class="form-group row">
                                         <label class="col-sm-2 form-control-label text-xs-right"> Tên gói hàng: </label>
                                         <div class="col-sm-10">
-                                            <input type="text" style="width:200px" class="form-control boxed"
+                                            <input type="text" style="width:200px" class="form-control boxed" name="namePackage"
                                                 placeholder="Nhập tên gói hàng">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-2 form-control-label text-xs-right"> SĐT người gửi: </label>
                                         <div class="col-sm-10">
-                                            <input type="number" style="width:200px" class="form-control boxed"
+                                            <input type="number" style="width:200px" class="form-control boxed" name="phoneSender"
                                                 placeholder="Nhập sđt">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-2 form-control-label text-xs-right"> Tên người nhận: </label>
                                         <div class="col-sm-10">
-                                            <input type="text" class="form-control boxed" placeholder="Nhập tên">
+                                            <input type="text" class="form-control boxed" placeholder="Nhập tên" name="nameReceiver">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-2 form-control-label text-xs-right"> SĐT người nhận: </label>
                                         <div class="col-sm-10">
-                                            <input type="number" style="width:200px" class="form-control boxed"
+                                            <input type="number" style="width:200px" class="form-control boxed" name="phoneReceiver"
                                                 placeholder="Nhập sđt">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-2 form-control-label text-xs-right">Địa chỉ nhận hàng: </label>
                                         <div class="col-sm-10">
-                                            <input type="text" id="address" class="form-control boxed" placeholder="Nhập tên">
+                                            <input type="text" id="address" name="address" class="form-control boxed" placeholder="Nhập tên">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -236,7 +136,7 @@
                                     <div class="form-group row">
                                         <label class="col-sm-2 form-control-label text-xs-right"> Cân nặng: </label>
                                         <div class="col-sm-10">
-                                            <input type="number" class="form-control boxed" placeholder="Nhập...">
+                                            <input type="number" name="weight" class="form-control boxed" placeholder="Nhập...">
                                         </div>
                                     </div>
             
@@ -283,7 +183,8 @@
                     </div>
                     <div class="col-md-4 total-section" style="margin-top: 100px;">
                         <h3>Tổng Giá Tiền</h3>
-                        <form name="total" id="total-form">
+                        <form name="total" id="total-form" method="post" action="AddPackage">
+                            <input type="hidden" name="action" value="calculatePrice">
                             <div class="form-group row">
                                 <label class="col-sm-4 form-control-label text-xs-right"> Số tiền thu hộ: </label>
                                 <div class="col-sm-8">
@@ -517,8 +418,8 @@
         ga('create', 'UA-80463319-4', 'auto');
         ga('send', 'pageview');
     </script>
-    <script src="js/vendor.js"></script>
-    <script src="js/app.js"></script>
+    <script src="<%= request.getContextPath() %>/views/admin/js/vendor.js"></script>
+    <script src="<%= request.getContextPath() %>/views/admin/js/app.js"></script>
     <script>
         $('.foo').click(function () {
             $(this).toggleClass('active');
@@ -541,7 +442,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Lấy dữ liệu tỉnh/thành phố từ API
-            axios.get('https://provinces.open-api.vn/api/?depth=2')
+                axios.get('https://provinces.open-api.vn/api/?depth=2')
                 .then(function (response) {
                     // Xử lý dữ liệu và cập nhật dropdown tỉnh/thành phố
                     var provinceDropdown = document.getElementById('provinceDropdown');

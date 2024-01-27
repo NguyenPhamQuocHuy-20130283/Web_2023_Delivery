@@ -27,6 +27,7 @@ public class LoginControl extends HttpServlet {
 
         HttpSession session = request.getSession();
         Account account = AuthDAO.loginNoJdbi(userName, passWord);
+        System.out.println(account);
         String ipAddress = request.getRemoteAddr();
         Log log = new Log(Log.INFO, ipAddress, -1, this.name, "", 0);
         if (account == null) {
@@ -43,8 +44,9 @@ public class LoginControl extends HttpServlet {
             log.setContent("LOGIN SUCCESS: USER - " + userName);
 
             int id = account.getIdRoleMember();
-            System.out.println(id);
-            response.sendRedirect("AdminHome");
+            session.setAttribute("account", account);
+            String sessionID = ";jsessionid="+session.getId();
+            response.sendRedirect(request.getContextPath() + "/AdminHome"+sessionID);
         }
 
     }

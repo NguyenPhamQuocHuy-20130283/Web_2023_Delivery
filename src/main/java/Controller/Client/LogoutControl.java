@@ -16,7 +16,7 @@ public class LogoutControl extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
-        session.removeAttribute("acc");
+        session.removeAttribute("account");
         response.sendRedirect("IndexControl");
     }
 
